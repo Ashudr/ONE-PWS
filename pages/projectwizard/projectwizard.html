@@ -1,120 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>ONEPWS | New Project</title>
-
-    <link rel="stylesheet"
-          href="../../assets/css/style.css">
-
-    <link rel="stylesheet"
-          href="../../assets/css/projectwizard.css">
-
-</head>
-
 <body>
 
-<header class="top-header">
+<div class="wizard-container">
 
-    <h2>Create New Project</h2>
+    <h1>Create New Project</h1>
 
-</header>
+    <!-- Progress Bar -->
 
-<div class="wizard">
+    <div class="wizard-progress">
 
-    <!-- Progress -->
+        <div class="wizard-step active">
 
-    <div class="steps">
+            <div class="circle">1</div>
 
-        <div class="step active">1<br>Project</div>
+            <span>Template</span>
 
-        <div class="step">2<br>Template</div>
+        </div>
 
-        <div class="step">3<br>Modules</div>
+        <div class="line"></div>
 
-        <div class="step">4<br>Review</div>
+        <div class="wizard-step">
+
+            <div class="circle">2</div>
+
+            <span>Project Details</span>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="wizard-step">
+
+            <div class="circle">3</div>
+
+            <span>Modules</span>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="wizard-step">
+
+            <div class="circle">4</div>
+
+            <span>Review</span>
+
+        </div>
 
     </div>
 
     <!-- STEP 1 -->
 
+    <div class="step-page active-page">
+
+        <h2>Select Project Template</h2>
+
+        <div class="template-grid">
+
+            <button class="template-btn">Office</button>
+
+            <button class="template-btn">Retail</button>
+
+            <button class="template-btn">Hospital</button>
+
+            <button class="template-btn">Hotel</button>
+
+            <button class="template-btn">Industrial</button>
+
+            <button class="template-btn">Custom</button>
+
+        </div>
+
+    </div>
+
+    <!-- STEP 2 -->
+
     <div class="step-page">
 
         <h2>Project Details</h2>
 
-        <div class="form-grid">
+        <p>This page will be built next.</p>
 
-            <input
-                type="text"
-                placeholder="SAP Project ID">
+    </div>
 
-            <input
-                type="text"
-                placeholder="Project Name">
+    <!-- STEP 3 -->
 
-            <input
-                type="text"
-                placeholder="Customer">
+    <div class="step-page">
 
-            <input
-                type="text"
-                placeholder="Business Unit">
+        <h2>Module Selection</h2>
 
-            <input
-                type="text"
-                placeholder="Location">
+        <p>This page will be built later.</p>
 
-            <input
-                type="text"
-                placeholder="BUH">
+    </div>
 
-            <input
-                type="text"
-                placeholder="Project Head">
+    <!-- STEP 4 -->
 
-            <input
-                type="text"
-                placeholder="Design Head">
+    <div class="step-page">
 
-            <input
-                type="text"
-                placeholder="Project Manager">
+        <h2>Review Project</h2>
 
-            <input
-                type="date">
+        <p>This page will be built later.</p>
 
-            <input
-                type="date">
+    </div>
 
-            <select>
+    <div class="wizard-buttons">
 
-                <option>Priority</option>
+        <button id="prevBtn">
 
-                <option>High</option>
+            ← Previous
 
-                <option>Medium</option>
+        </button>
 
-                <option>Low</option>
+        <button id="nextBtn">
 
-            </select>
+            Next →
 
-        </div>
-
-        <div class="buttons">
-
-            <button id="nextBtn">
-
-                Next →
-
-            </button>
-
-        </div>
+        </button>
 
     </div>
 
@@ -123,5 +123,3 @@
 <script src="../../assets/js/projectwizard.js"></script>
 
 </body>
-
-</html>
