@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>ONEPWS Dashboard</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="../../assets/css/style.css">
+
+<link rel="stylesheet"
+href="../../assets/css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="../../assets/images/onepws-logo.png">
+
+</div>
+
+<ul>
+
+<li class="active">
+<i class="fa-solid fa-chart-line"></i>
+Dashboard
+</li>
+
+<li>
+<i class="fa-solid fa-folder"></i>
+Project Board
+</li>
+
+<li>
+<i class="fa-solid fa-chart-pie"></i>
+Progress Board
+</li>
+
+<li>
+<i class="fa-solid fa-table-columns"></i>
+Task Board
+</li>
+
+<li>
+<i class="fa-solid fa-users"></i>
+Users
+</li>
+
+<li>
+<i class="fa-solid fa-gear"></i>
+Settings
+</li>
+
+<li>
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<div>
+
+<h2>Dashboard</h2>
+
+<p>Enterprise Project Management System</p>
+
+</div>
+
+<div class="top-right">
+
+<input
+type="text"
+placeholder="Search...">
+
+<i class="fa-solid fa-bell"></i>
+
+<div class="profile">
+
+Admin
+
+</div>
+
+</div>
+
+</header>
+
+<section class="cards">
+
+<div class="card">
+
+<h3>Total Projects</h3>
+
+<h1>128</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Open Tasks</h3>
+
+<h1>356</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Critical Tasks</h3>
+
+<h1>12</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Completion</h3>
+
+<h1>86%</h1>
+
+</div>
+
+</section>
+
+<section class="dashboard-grid">
+
+<div class="panel">
+
+<h3>Project Completion</h3>
+
+<canvas id="projectChart"></canvas>
+
+</div>
+
+<div class="panel">
+
+<h3>Recent Activity</h3>
+
+<ul>
+
+<li>Layout Approved</li>
+
+<li>QC Completed</li>
+
+<li>Project Assigned</li>
+
+<li>Material Dispatched</li>
+
+</ul>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="../../assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

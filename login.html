@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ONEPWS | Login</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- Login Container -->
+    <div class="login-container">
+
+        <!-- Company Logo -->
+        <img src="assets/images/onepws-logo.png"
+             alt="ONEPWS Logo"
+             class="company-logo">
+
+        <!-- Company Name -->
+        <h1>ONEPWS</h1>
+
+        <p class="subtitle">
+            Enterprise Project Management System
+        </p>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+
+            <div class="input-group">
+
+                <label>Username</label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter Username"
+                    autocomplete="username"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter Password"
+                    autocomplete="current-password"
+                    required>
+
+            </div>
+
+            <div class="login-options">
+
+                <label class="remember-me">
+
+                    <input type="checkbox">
+
+                    Remember Me
+
+                </label>
+
+                <a href="pages/auth/forgotpassword.html">
+                    Forgot Password?
+                </a>
+
+            </div>
+
+            <button type="submit" class="login-btn">
+
+                Login
+
+            </button>
+
+        </form>
+
+        <div class="version">
+
+            Version 1.0.0
+
+        </div>
+
+    </div>
+
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>
