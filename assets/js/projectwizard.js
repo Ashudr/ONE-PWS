@@ -5,6 +5,7 @@
 "use strict";
 
 let currentStep = 0;
+let selectedTemplate = "";
 
 const pages = document.querySelectorAll(".step-page");
 const steps = document.querySelectorAll(".wizard-step");
@@ -15,7 +16,27 @@ const previousButton = document.getElementById("prevBtn");
 /* ==========================================================
    Initial Load
 ========================================================== */
+/* ==========================================================
+   Template Selection
+========================================================== */
 
+const templateButtons = document.querySelectorAll(".template-btn");
+
+templateButtons.forEach(function(button){
+
+    button.addEventListener("click", function(){
+
+        templateButtons.forEach(function(btn){
+            btn.classList.remove("selected");
+        });
+
+        this.classList.add("selected");
+
+        selectedTemplate = this.innerText;
+
+    });
+
+});
 showStep(currentStep);
 
 /* ==========================================================
@@ -23,6 +44,16 @@ showStep(currentStep);
 ========================================================== */
 
 nextButton.addEventListener("click", function () {
+
+    // Step 1 Validation
+
+    if(currentStep === 0 && selectedTemplate === ""){
+
+        alert("Please select a Project Template.");
+
+        return;
+
+    }
 
     if (currentStep < pages.length - 1) {
 

@@ -247,3 +247,12 @@ body{
     cursor:not-allowed;
 
 }
+.template-btn.selected{
+
+    background:#1B2B4B;
+
+    color:white;
+
+    border-color:#1B2B4B;
+
+}
