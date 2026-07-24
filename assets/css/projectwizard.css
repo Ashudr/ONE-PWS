@@ -238,3 +238,12 @@ body{
 
     background:#28406d;
 }
+/* Disabled Button */
+
+.wizard-buttons button:disabled{
+
+    opacity:.4;
+
+    cursor:not-allowed;
+
+}
