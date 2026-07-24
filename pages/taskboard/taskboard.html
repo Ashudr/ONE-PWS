@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ONEPWS | Task Board</title>
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/taskboard.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top-header">
+
+        <div class="logo-area">
+
+            <img src="../../assets/images/onepws-logo.png" alt="ONEPWS">
+
+            <div>
+
+                <h2>ONEPWS</h2>
+
+                <p>Enterprise Project Management System</p>
+
+            </div>
+
+        </div>
+
+        <div class="header-right">
+
+            <button id="backBtn">
+                ← Project Progress
+            </button>
+
+            <button id="notificationBtn">
+                🔔
+            </button>
+
+            <button id="profileBtn">
+                Ashu ▼
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- ================= TOOLBAR ================= -->
+
+    <section class="toolbar">
+
+        <button id="newTaskBtn">
+            + New Task
+        </button>
+
+        <button id="childTaskBtn">
+            + Child Task
+        </button>
+
+        <input
+            type="text"
+            id="searchTask"
+            placeholder="Search Task...">
+
+        <button>
+            Filter
+        </button>
+
+        <button>
+            Export
+        </button>
+
+        <button>
+            Refresh
+        </button>
+
+    </section>
+
+    <!-- ================= KANBAN BOARD ================= -->
+
+    <main class="board-container">
+
+        <!-- RFQ -->
+
+        <section class="lane">
+
+            <h2>RFQ</h2>
+
+            <div class="task-card">
+
+                <h3>PAR-001</h3>
+
+                <p>Partition Layout</p>
+
+                <small>Assigned : Ashu</small>
+
+            </div>
+
+        </section>
+
+        <!-- INFO -->
+
+        <section class="lane">
+
+            <h2>INFO MISSING</h2>
+
+        </section>
+
+        <!-- WIP -->
+
+        <section class="lane">
+
+            <h2>WIP</h2>
+
+            <div class="task-card">
+
+                <h3>CEL-012</h3>
+
+                <p>Ceiling Shop Drawing</p>
+
+                <small>Assigned : Design Team</small>
+
+            </div>
+
+        </section>
+
+        <!-- QC -->
+
+        <section class="lane">
+
+            <h2>QUALITY CHECK</h2>
+
+        </section>
+
+        <!-- RESOLUTION -->
+
+        <section class="lane">
+
+            <h2>RESOLUTION</h2>
+
+        </section>
+
+        <!-- COMPLETED -->
+
+        <section class="lane">
+
+            <h2>COMPLETED</h2>
+
+        </section>
+
+    </main>
+
+    <!-- ================= TASK POPUP ================= -->
+
+    <div id="taskModal" class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal">&times;</span>
+
+            <h2>Task Details</h2>
+
+            <hr>
+
+            <p>
+
+                This popup will later contain:
+
+            </p>
+
+            <ul>
+
+                <li>General Information</li>
+
+                <li>Description</li>
+
+                <li>Attachments</li>
+
+                <li>Comments</li>
+
+                <li>Child Tasks</li>
+
+                <li>History</li>
+
+                <li>Approval Log</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script src="../../assets/js/taskboard.js"></script>
+
+</body>
+
+</html>
