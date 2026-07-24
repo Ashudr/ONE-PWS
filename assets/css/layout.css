@@ -1,0 +1,45 @@
+.top-header{
+
+    height:70px;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+}
+
+.main-wrapper{
+
+    display:flex;
+
+    min-height:calc(100vh - 70px);
+
+}
+
+.sidebar{
+
+    width:240px;
+
+    background:#243B55;
+
+    padding:20px;
+
+}
+
+.content{
+
+    flex:1;
+
+    padding:30px;
+
+    background:var(--background);
+
+}

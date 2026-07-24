@@ -1,0 +1,48 @@
+/* ==========================
+   ONEPWS Base Styles
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    background:#F5F7FA;
+
+    color:#2F3542;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+}
+
+img{
+    max-width:100%;
+}
+
+button,
+input,
+select,
+textarea{
+
+    font-family:inherit;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
