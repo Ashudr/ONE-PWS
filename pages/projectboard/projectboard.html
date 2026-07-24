@@ -15,170 +15,128 @@
 
 <body>
 
-    <!-- ========================= -->
-    <!-- HEADER -->
-    <!-- ========================= -->
+    <!-- ================= HEADER ================= -->
 
     <header class="top-header">
 
-        <div class="logo-section">
+        <div class="logo-area">
 
-            <img src="../../assets/images/onepws-logo.png"
-                class="header-logo"
-                alt="ONEPWS">
+            <img src="../../assets/images/onepws-logo.png" alt="ONEPWS Logo">
 
             <div>
 
                 <h2>ONEPWS</h2>
 
-                <span>Enterprise Project Management System</span>
+                <p>Enterprise Project Management System</p>
 
             </div>
 
         </div>
 
-        <div class="header-right">
+        <div class="header-actions">
 
             <input
                 type="text"
-                id="projectSearch"
+                id="searchProject"
                 placeholder="Search Project...">
 
-            <button id="notificationButton">
+            <button id="notificationBtn">🔔</button>
 
-                🔔
-
-            </button>
-
-            <div class="user-profile">
-
-                <span>Ashu</span>
-
-            </div>
+            <button id="profileBtn">Ashu ▼</button>
 
         </div>
 
     </header>
 
+    <!-- ================= MAIN ================= -->
 
+    <div class="main-wrapper">
 
-    <!-- ========================= -->
-    <!-- MAIN CONTAINER -->
-    <!-- ========================= -->
-
-    <div class="main-container">
-
-
-
-        <!-- ========================= -->
         <!-- SIDEBAR -->
-        <!-- ========================= -->
 
         <aside class="sidebar">
 
-            <button class="menu active">
-
+            <button class="active">
                 📁 Project Board
-
             </button>
 
-            <button class="menu">
-
+            <button>
                 📊 Reports
-
             </button>
 
-            <button class="menu">
-
+            <button>
                 👥 Users
-
             </button>
 
-            <button class="menu">
-
+            <button>
                 ⚙ Settings
-
             </button>
 
-            <button class="menu">
-
+            <button>
                 🚪 Logout
-
             </button>
 
         </aside>
 
-
-
-        <!-- ========================= -->
         <!-- CONTENT -->
-        <!-- ========================= -->
 
         <main class="content">
 
             <!-- PAGE TITLE -->
 
-            <section class="page-title">
+            <section class="page-header">
 
                 <h1>
-
                     Project Board
-
                 </h1>
 
-                <button id="newProjectButton">
-
+                <button id="newProject">
                     + New Project
-
                 </button>
 
             </section>
 
+            <!-- KPI -->
 
+            <section class="kpi-container">
 
-            <!-- KPI ROW -->
+                <div class="kpi-box">
 
-            <section class="kpi-row">
+                    <h3>Active</h3>
 
-                <div class="kpi-card">
-
-                    <h3>Active Projects</h3>
-
-                    <h1>18</h1>
+                    <h2>18</h2>
 
                 </div>
 
-                <div class="kpi-card">
-
-                    <h3>On Hold</h3>
-
-                    <h1>3</h1>
-
-                </div>
-
-                <div class="kpi-card">
+                <div class="kpi-box">
 
                     <h3>Completed</h3>
 
-                    <h1>12</h1>
+                    <h2>12</h2>
 
                 </div>
 
-                <div class="kpi-card">
+                <div class="kpi-box">
 
                     <h3>Critical</h3>
 
-                    <h1>2</h1>
+                    <h2>2</h2>
+
+                </div>
+
+                <div class="kpi-box">
+
+                    <h3>On Hold</h3>
+
+                    <h2>3</h2>
 
                 </div>
 
             </section>
 
-
-
             <!-- FILTERS -->
 
-            <section class="filters">
+            <section class="filter-row">
 
                 <select>
 
@@ -206,85 +164,43 @@
 
             </section>
 
-
-
             <!-- PROJECT GRID -->
 
             <section class="project-grid">
 
-                <!-- Project 1 -->
+                <!-- PROJECT CARD -->
 
-                <div class="project-tile">
+                <div class="project-card">
 
-                    <canvas id="project1Chart"></canvas>
+                    <div class="project-progress">
 
-                    <h3>Corporate HQ</h3>
+                        72%
 
-                    <p>SAP240125</p>
+                    </div>
 
-                    <span>Customer : ABC Ltd.</span>
+                    <h2>Corporate HQ</h2>
 
-                    <span>PM : Ashu</span>
+                    <p><strong>Project ID :</strong> SAP240125</p>
 
-                    <span>21 Days Left</span>
+                    <p><strong>Customer :</strong> ABC Pvt Ltd</p>
 
-                    <strong>🟢 On Track</strong>
+                    <p><strong>Project Manager :</strong> Ashu</p>
 
-                </div>
+                    <p><strong>Status :</strong> 🟢 On Track</p>
 
+                    <button class="openProject">
 
+                        Open Project
 
-                <!-- Project 2 -->
-
-                <div class="project-tile">
-
-                    <canvas id="project2Chart"></canvas>
-
-                    <h3>Airport Lounge</h3>
-
-                    <p>SAP240126</p>
-
-                    <span>Customer : XYZ Ltd.</span>
-
-                    <span>PM : Rahul</span>
-
-                    <span>18 Days Left</span>
-
-                    <strong>🟡 Attention</strong>
+                    </button>
 
                 </div>
-
-
-
-                <!-- Project 3 -->
-
-                <div class="project-tile">
-
-                    <canvas id="project3Chart"></canvas>
-
-                    <h3>Hospital Project</h3>
-
-                    <p>SAP240127</p>
-
-                    <span>Customer : PQR Hospital</span>
-
-                    <span>PM : Vivek</span>
-
-                    <span>42 Days Left</span>
-
-                    <strong>🔴 Critical</strong>
-
-                </div>
-
-
 
             </section>
 
         </main>
 
     </div>
-
-
 
     <script src="../../assets/js/projectboard.js"></script>
 
