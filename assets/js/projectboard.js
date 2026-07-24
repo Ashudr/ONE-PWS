@@ -54,12 +54,17 @@ function initializeButtons() {
 
     // New Project
 
-    const newProjectButton = document.getElementById("newProjectBtn").addEventListener("click", function () {
+    const newProjectButton = document.getElementById("newProject");
 
-    window.location.href = "../projectwizard/projectwizard.html";
+    if (newProjectButton) {
 
-});
+        newProjectButton.addEventListener("click", function () {
 
+            alert("New Project popup will be added in the next sprint.");
+
+        });
+
+    }
 
     // Notification
 
