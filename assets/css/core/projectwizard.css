@@ -1,0 +1,240 @@
+/* ===================================================
+   ONEPWS - PROJECT WIZARD
+===================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    background:#eef2f7;
+
+    color:#333;
+
+}
+
+/*================ HEADER ================*/
+
+.wizard-container{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:30px auto;
+
+    background:white;
+
+    border-radius:14px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+    overflow:hidden;
+
+}
+
+.wizard-container h1{
+
+    background:#1B2B4B;
+
+    color:white;
+
+    padding:22px;
+
+    font-size:28px;
+
+}
+
+/*================ PROGRESS ================*/
+
+.wizard-progress{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:35px 50px;
+
+}
+
+.wizard-step{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    min-width:120px;
+
+}
+
+.circle{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#d5dbe5;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.wizard-step.active .circle{
+
+    background:#1B2B4B;
+
+    color:white;
+
+}
+
+.wizard-step span{
+
+    margin-top:10px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.line{
+
+    flex:1;
+
+    height:4px;
+
+    background:#d5dbe5;
+
+    margin:0 12px;
+
+}
+
+/*================ PAGES ================*/
+
+.step-page{
+
+    display:none;
+
+    padding:40px 60px;
+
+    min-height:420px;
+
+}
+
+.active-page{
+
+    display:block;
+
+}
+
+.step-page h2{
+
+    margin-bottom:25px;
+
+    color:#1B2B4B;
+
+}
+
+/*================ TEMPLATE ================*/
+
+.template-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.template-btn{
+
+    border:none;
+
+    background:white;
+
+    border:2px solid #d7dde8;
+
+    border-radius:12px;
+
+    padding:40px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.template-btn:hover{
+
+    background:#1B2B4B;
+
+    color:white;
+
+    transform:translateY(-4px);
+
+}
+
+/*================ BUTTONS ================*/
+
+.wizard-buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:25px 60px;
+
+    border-top:1px solid #ececec;
+
+}
+
+.wizard-buttons button{
+
+    padding:14px 34px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:#1B2B4B;
+
+    color:white;
+
+}
+
+.wizard-buttons button:hover{
+
+    background:#28406d;
+}
