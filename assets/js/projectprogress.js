@@ -1,55 +1,68 @@
 /* ==========================================================
-   ONEPWS
-   Project Progress JavaScript
+   ONEPWS TASK BOARD
 ========================================================== */
 
 "use strict";
 
 /* ==========================================================
-   Initialize Page
+   INITIALIZE
 ========================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("Project Progress Loaded");
+    console.log("ONEPWS Task Board Loaded");
 
     initializeButtons();
 
-    animateProgress();
+    initializeSearch();
+
+    initializeCards();
 
 });
 
 /* ==========================================================
-   Buttons
+   BUTTONS
 ========================================================== */
 
 function initializeButtons() {
 
     // Back Button
 
-    const backButton = document.getElementById("backButton");
+    const backBtn = document.getElementById("backBtn");
 
-    if (backButton) {
+    if(backBtn){
 
-        backButton.addEventListener("click", function () {
+        backBtn.addEventListener("click",function(){
 
-            window.location.href =
-                "../projectboard/projectboard.html";
+            window.location.href="../projectprogress/projectprogress.html";
 
         });
 
     }
 
-    // Task Board
+    // New Task
 
-    const taskButton = document.getElementById("taskBoardBtn");
+    const newTask=document.getElementById("newTaskBtn");
 
-    if (taskButton) {
+    if(newTask){
 
-        taskButton.addEventListener("click", function () {
+        newTask.addEventListener("click",function(){
 
-            window.location.href =
-                "../taskboard/taskboard.html";
+            alert("New Task popup will be developed in Sprint 5.");
+
+        });
+
+    }
+
+    // Child Task
+
+    const childTask=document.getElementById("childTaskBtn");
+
+    if(childTask){
+
+        childTask.addEventListener("click",function(){
+
+            alert("Child Task popup will be developed in Sprint 5.");
 
         });
 
@@ -57,14 +70,13 @@ function initializeButtons() {
 
     // Notification
 
-    const notificationButton =
-        document.getElementById("notificationBtn");
+    const notification=document.getElementById("notificationBtn");
 
-    if (notificationButton) {
+    if(notification){
 
-        notificationButton.addEventListener("click", function () {
+        notification.addEventListener("click",function(){
 
-            alert("Notification Center will be added soon.");
+            alert("Notification Center Coming Soon.");
 
         });
 
@@ -72,14 +84,13 @@ function initializeButtons() {
 
     // Profile
 
-    const profileButton =
-        document.getElementById("profileBtn");
+    const profile=document.getElementById("profileBtn");
 
-    if (profileButton) {
+    if(profile){
 
-        profileButton.addEventListener("click", function () {
+        profile.addEventListener("click",function(){
 
-            alert("User Profile coming soon.");
+            alert("User Profile Coming Soon.");
 
         });
 
@@ -88,32 +99,77 @@ function initializeButtons() {
 }
 
 /* ==========================================================
-   Progress Animation
+   SEARCH
 ========================================================== */
 
-function animateProgress() {
+function initializeSearch(){
 
-    const circle =
-        document.querySelector(".progress-circle");
+    const search=document.getElementById("searchTask");
 
-    if (!circle) return;
+    if(!search) return;
 
-    let progress = 0;
+    search.addEventListener("keyup",function(){
 
-    const target = 72;
+        const keyword=this.value.toLowerCase();
 
-    const timer = setInterval(function () {
+        const cards=document.querySelectorAll(".task-card");
 
-        progress++;
+        cards.forEach(function(card){
 
-        circle.innerHTML = progress + "%";
+            if(card.innerText.toLowerCase().includes(keyword)){
 
-        if (progress >= target) {
+                card.style.display="block";
 
-            clearInterval(timer);
+            }
+
+            else{
+
+                card.style.display="none";
+
+            }
+
+        });
+
+    });
+
+}
+
+/* ==========================================================
+   TASK POPUP
+========================================================== */
+
+function initializeCards(){
+
+    const cards=document.querySelectorAll(".task-card");
+
+    const modal=document.getElementById("taskModal");
+
+    const close=document.getElementById("closeModal");
+
+    cards.forEach(function(card){
+
+        card.addEventListener("click",function(){
+
+            modal.style.display="block";
+
+        });
+
+    });
+
+    close.addEventListener("click",function(){
+
+        modal.style.display="none";
+
+    });
+
+    window.addEventListener("click",function(event){
+
+        if(event.target===modal){
+
+            modal.style.display="none";
 
         }
 
-    }, 20);
+    });
 
 }
