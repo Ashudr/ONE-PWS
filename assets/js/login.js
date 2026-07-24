@@ -1,29 +1,37 @@
-const loginForm = document.getElementById("loginForm");
+/* ==========================================================
+   ONEPWS Enterprise Project Management System
+   Module : Login
+   Version : 1.0
+   ========================================================== */
 
-loginForm.addEventListener("submit", function(e){
+document.addEventListener("DOMContentLoaded", () => {
 
-    e.preventDefault();
+    const loginForm = document.getElementById("loginForm");
 
-    const username =
-    document.getElementById("username").value.trim();
+    loginForm.addEventListener("submit", function (event) {
 
-    const password =
-    document.getElementById("password").value.trim();
+        // Prevent page refresh
+        event.preventDefault();
 
-    if(username==="Mr_Responsible@1006" &&
-       password==="Mr_Responsible@1006"){
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-        alert("Login Successful");
+        // Simple validation
+        if (username === "") {
+            alert("Please enter your username.");
+            return;
+        }
 
-        // Next sprint:
-        // window.location.href="../dashboard/dashboard.html";
+        if (password === "") {
+            alert("Please enter your password.");
+            return;
+        }
 
-    }
+        // Temporary login
+        // Later this will be replaced with PHP + MySQL authentication
 
-    else{
+        window.location.href = "pages/projectboard/projectboard.html";
 
-        alert("Invalid Login ID or Password");
-
-    }
+    });
 
 });
