@@ -60,12 +60,12 @@ function initializeButtons() {
 
         newProjectButton.addEventListener("click", function () {
 
-    window.location.href =
-        "../projectwizard/projectwizard.html";
+            alert("New Project popup will be added in the next sprint.");
 
-});
+        });
 
     }
+
 
     // Notification
 
