@@ -488,7 +488,7 @@ function createProject(){
     alert("Project Created Successfully.");
 
     window.location.href =
-        "../projectdashboard/projectdashboard.html";
+        "../dashboard/dashboard.html";
 
 }
 
