@@ -199,6 +199,14 @@ function nextStep() {
 
     }
 
+    else {
+
+        createProject();
+
+    }
+
+    updateButtons();
+
 }
 
 /* ==========================================================
