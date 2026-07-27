@@ -70,13 +70,19 @@
 
     <!-- STEP 1 -->
 
-    <div class="step-page active-page">
+    <div class="step-page active-page" id="step1">
 
         <h2>Select Project Template</h2>
 
         <div class="template-grid">
 
-            <button class="template-btn">Office</button>
+           <button class="template-btn"
+
+        data-template="Office">
+
+    Office
+
+</button>
 
             <button class="template-btn">Retail</button>
 
@@ -94,9 +100,9 @@
 
     <!-- STEP 2 -->
 
-    <div class="step-page">
+    <div class="step-page" id="step2">
 
-        <section id="step2" class="wizard-step-content">
+        <section class="wizard-step-content">
 
     <h2>Project Details</h2>
 
@@ -188,7 +194,7 @@
 
     <!-- STEP 3 -->
 
-    <div class="step-page">
+    <div class="step-page" id="step3">
 
         <h2>Module Selection</h2>
 
@@ -198,7 +204,7 @@
 
     <!-- STEP 4 -->
 
-    <div class="step-page">
+    <div class="step-page" id="step4">
 
         <h2>Review Project</h2>
 
@@ -208,19 +214,25 @@
 
     <div class="wizard-buttons">
 
-        <button id="prevBtn">
+    <button id="cancelBtn">
 
-            ← Previous
+        Cancel
 
-        </button>
+    </button>
 
-        <button id="nextBtn">
+    <button id="prevBtn">
 
-            Next →
+        ← Previous
 
-        </button>
+    </button>
 
-    </div>
+    <button id="nextBtn">
+
+        Next →
+
+    </button>
+
+</div>
 
 </div>
 

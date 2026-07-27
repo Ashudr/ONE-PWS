@@ -1,21 +1,125 @@
 "use strict";
 
-/* ==========================================
-   NEW PROJECT OBJECT
-========================================== */
+/* ==========================================================
+   ONEPWS - Project Wizard
+   Version : 1.0
+========================================================== */
+
+/* ==========================================================
+   PROJECT OBJECT
+========================================================== */
 
 let newProject = {
 
-    function initializeProjectDetails() {
+    template: "",
+
+    projectNumber: generateProjectNumber(),
+
+    projectName: "",
+
+    customer: "",
+
+    businessUnit: "",
+
+    projectManager: "",
+
+    designHead: "",
+
+    priority: "Medium",
+
+    startDate: "",
+
+    endDate: "",
+
+    description: "",
+
+    modules: []
+
+};
+
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+let currentStep = 1;
+
+const totalSteps = 4;
+
+/* ==========================================================
+   PAGE LOAD
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    initializeWizard();
+
+    initializeTemplates();
+
+    initializeProjectDetails();
+
+});
+
+/* ==========================================================
+   INITIALIZE
+========================================================== */
+
+function initializeWizard() {
+
+    showStep(1);
 
     document.getElementById("projectNumber").value =
         newProject.projectNumber;
 
+    document.getElementById("prevBtn").addEventListener("click", previousStep);
+
+    document.getElementById("nextBtn").addEventListener("click", nextStep);
+
+    document.getElementById("cancelBtn").addEventListener("click", cancelWizard);
+
+}
+
+/* ==========================================================
+   TEMPLATE BUTTONS
+========================================================== */
+
+function initializeTemplates() {
+
+    const templates = document.querySelectorAll(".template-btn");
+
+    templates.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            templates.forEach(function (b) {
+
+                b.classList.remove("selected");
+
+            });
+
+            this.classList.add("selected");
+
+            newProject.template =
+                this.dataset.template;
+
+            console.log(newProject);
+
+            nextStep();
+
+        });
+
+    });
+
+}
+
+/* ==========================================================
+   PROJECT DETAILS
+========================================================== */
+
+function initializeProjectDetails() {
+
     document.getElementById("projectName").addEventListener("input", function () {
 
         newProject.projectName = this.value;
-
-        console.log(newProject);
 
     });
 
@@ -69,28 +173,110 @@ let newProject = {
 
 }
 
-    template: "",
+/* ==========================================================
+   NEXT
+========================================================== */
 
-    projectNumber: "SAP260001",
+function nextStep() {
 
-    projectName: "",
+    if (currentStep < totalSteps) {
 
-    customer: "",
+        currentStep++;
 
-    businessUnit: "",
+        showStep(currentStep);
 
-    projectManager: "",
+    }
 
-    designHead: "",
+}
 
-    priority: "Medium",
+/* ==========================================================
+   PREVIOUS
+========================================================== */
 
-    startDate: "",
+function previousStep() {
 
-    endDate: "",
+    if (currentStep > 1) {
 
-    description: "",
+        currentStep--;
 
-    modules: []
+        showStep(currentStep);
 
-};
+    }
+
+}
+
+/* ==========================================================
+   SHOW STEP
+========================================================== */
+
+function showStep(step) {
+
+    const pages =
+        document.querySelectorAll(".step-page");
+
+    pages.forEach(function (page) {
+
+        page.classList.remove("active-page");
+
+    });
+
+    document.getElementById("step" + step)
+        .classList.add("active-page");
+
+    updateProgress(step);
+
+}
+
+/* ==========================================================
+   UPDATE PROGRESS
+========================================================== */
+
+function updateProgress(step) {
+
+    const wizardSteps =
+        document.querySelectorAll(".wizard-step");
+
+    wizardSteps.forEach(function (item, index) {
+
+        item.classList.remove("active");
+
+        if (index < step) {
+
+            item.classList.add("active");
+
+        }
+
+    });
+
+}
+
+/* ==========================================================
+   PROJECT NUMBER
+========================================================== */
+
+function generateProjectNumber() {
+
+    const year =
+        new Date().getFullYear();
+
+    const random =
+        Math.floor(1000 + Math.random() * 9000);
+
+    return "SAP-" + year + "-" + random;
+
+}
+
+/* ==========================================================
+   CANCEL
+========================================================== */
+
+function cancelWizard() {
+
+    if (confirm("Cancel Project Creation ?")) {
+
+        window.location.href =
+            "../projectboard/projectboard.html";
+
+    }
+
+}
