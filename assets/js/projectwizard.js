@@ -488,8 +488,8 @@ function createProject(){
     alert("Project Created Successfully.");
 
     window.location.href =
-        "../dashboard/dashboard.html";
-
+        "../projectdashboard/projectdashboard.html";
+z
 }
 
 /* ==========================================================
