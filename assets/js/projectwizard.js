@@ -478,3 +478,15 @@ function loadReview(){
         newProject.modules.join(", ");
 
 }
+/* ==========================================================
+CREATE PROJECT
+========================================================== */
+
+function createProject(){
+
+    alert("Project Created Successfully.");
+
+    window.location.href =
+        "../projectdashboard/projectdashboard.html";
+
+}
