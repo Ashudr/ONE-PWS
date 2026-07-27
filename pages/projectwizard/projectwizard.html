@@ -96,10 +96,94 @@
 
     <div class="step-page">
 
-        <h2>Project Details</h2>
+        <section id="step2" class="wizard-step-content">
 
-        <p>This page will be built next.</p>
+    <h2>Project Details</h2>
 
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Project Number</label>
+            <input type="text" id="projectNumber" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>Project Name</label>
+            <input type="text" id="projectName" placeholder="Enter Project Name">
+        </div>
+
+        <div class="form-group">
+            <label>Customer</label>
+            <select id="customer">
+                <option value="">Select Customer</option>
+                <option>ABC Pvt Ltd</option>
+                <option>XYZ Industries</option>
+                <option>DEF Corporation</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Business Unit</label>
+            <select id="businessUnit">
+                <option>Corporate</option>
+                <option>Retail</option>
+                <option>Healthcare</option>
+                <option>Hospitality</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Project Manager</label>
+            <select id="projectManager">
+                <option>Ashu</option>
+                <option>Manager 2</option>
+                <option>Manager 3</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Design Head</label>
+            <select id="designHead">
+                <option>Select Design Head</option>
+                <option>Design Head 1</option>
+                <option>Design Head 2</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Priority</label>
+
+            <select id="priority">
+                <option>Low</option>
+                <option selected>Medium</option>
+                <option>High</option>
+                <option>Critical</option>
+            </select>
+
+        </div>
+
+        <div class="form-group">
+            <label>Start Date</label>
+            <input type="date" id="startDate">
+        </div>
+
+        <div class="form-group">
+            <label>Target Completion</label>
+            <input type="date" id="endDate">
+        </div>
+
+        <div class="form-group full-width">
+            <label>Description</label>
+
+            <textarea id="description"
+                      rows="4"
+                      placeholder="Project Description"></textarea>
+
+        </div>
+
+    </div>
+
+</section>
     </div>
 
     <!-- STEP 3 -->
