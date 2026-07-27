@@ -179,6 +179,18 @@ function initializeProjectDetails() {
 
 function nextStep() {
 
+    if (currentStep == 2) {
+
+        loadModules();
+
+    }
+
+    if (currentStep == 3) {
+
+        loadReview();
+
+    }
+
     if (currentStep < totalSteps) {
 
         currentStep++;
