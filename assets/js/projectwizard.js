@@ -292,3 +292,181 @@ function cancelWizard() {
     }
 
 }
+
+/* ==========================================================
+LOAD MODULES
+========================================================== */
+
+function loadModules() {
+
+    const container = document.getElementById("moduleContainer");
+
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    let modules = [];
+
+    switch(newProject.template){
+
+        case "Office":
+
+            modules = [
+
+                "Ceiling",
+
+                "Flooring",
+
+                "Partition",
+
+                "Furniture",
+
+                "Doors",
+
+                "Windows",
+
+                "Electrical",
+
+                "HVAC"
+
+            ];
+
+            break;
+
+        case "Retail":
+
+            modules = [
+
+                "Display",
+
+                "Signage",
+
+                "Lighting",
+
+                "Furniture",
+
+                "Flooring"
+
+            ];
+
+            break;
+
+        case "Hospital":
+
+            modules = [
+
+                "Medical Gas",
+
+                "HVAC",
+
+                "Clean Room",
+
+                "Ceiling",
+
+                "Flooring"
+
+            ];
+
+            break;
+
+        case "Hotel":
+
+            modules = [
+
+                "Lobby",
+
+                "Guest Rooms",
+
+                "Restaurant",
+
+                "Furniture",
+
+                "Lighting"
+
+            ];
+
+            break;
+
+        case "Industrial":
+
+            modules = [
+
+                "Structure",
+
+                "Utility",
+
+                "Electrical",
+
+                "Flooring"
+
+            ];
+
+            break;
+
+        default:
+
+            modules = [];
+
+    }
+
+    newProject.modules = modules;
+
+    modules.forEach(function(module){
+
+        container.innerHTML +=
+
+        `<label class="module-card">
+
+            <input type="checkbox" checked>
+
+            <span>${module}</span>
+
+        </label>`;
+
+    });
+
+}
+
+/* ==========================================================
+LOAD REVIEW
+========================================================== */
+
+function loadReview(){
+
+    document.getElementById("reviewTemplate").innerText =
+        newProject.template;
+
+    document.getElementById("reviewProjectNumber").innerText =
+        newProject.projectNumber;
+
+    document.getElementById("reviewProjectName").innerText =
+        newProject.projectName;
+
+    document.getElementById("reviewCustomer").innerText =
+        newProject.customer;
+
+    document.getElementById("reviewBusinessUnit").innerText =
+        newProject.businessUnit;
+
+    document.getElementById("reviewProjectManager").innerText =
+        newProject.projectManager;
+
+    document.getElementById("reviewDesignHead").innerText =
+        newProject.designHead;
+
+    document.getElementById("reviewPriority").innerText =
+        newProject.priority;
+
+    document.getElementById("reviewStartDate").innerText =
+        newProject.startDate;
+
+    document.getElementById("reviewEndDate").innerText =
+        newProject.endDate;
+
+    document.getElementById("reviewDescription").innerText =
+        newProject.description;
+
+    document.getElementById("reviewModules").innerText =
+        newProject.modules.join(", ");
+
+}
