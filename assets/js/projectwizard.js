@@ -244,6 +244,7 @@ function showStep(step) {
         .classList.add("active-page");
 
     updateProgress(step);
+    updateButtons();
 
 }
 
@@ -488,5 +489,30 @@ function createProject(){
 
     window.location.href =
         "../projectdashboard/projectdashboard.html";
+
+}
+
+/* ==========================================================
+UPDATE BUTTONS
+========================================================== */
+
+function updateButtons(){
+
+    const next =
+        document.getElementById("nextBtn");
+
+    if(currentStep == totalSteps){
+
+        next.innerHTML =
+            "✔ Create Project";
+
+    }
+
+    else{
+
+        next.innerHTML =
+            "Next →";
+
+    }
 
 }
