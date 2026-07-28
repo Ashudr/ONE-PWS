@@ -58,7 +58,7 @@ function initializeButtons() {
 
     if (newProjectButton) {
 
-       newProjectbutton.addEventListener("click", function () {
+       newProjectButton.addEventListener("click", function () {
 
     alert("Open Project button clicked.");
 
