@@ -826,90 +826,90 @@ ANALYTICS SECTION
 
 </div>
 
-/*==================================================
-                FOOTER GRID
-====================================================*/
+<!-- ===========================================================
+FOOTER DASHBOARD PANELS
+=========================================================== -->
 
-.footer-grid{
+<div class="footer-grid">
 
-    display:grid;
+    <!-- TODAY'S SCHEDULE -->
 
-    grid-template-columns:1fr 1fr;
+    <div class="footer-panel">
 
-    gap:25px;
+        <div class="panel-header">
 
-    margin-top:30px;
+            <h2>Today's Schedule</h2>
 
-}
+        </div>
 
-.footer-panel{
+        <div class="schedule-item">
 
-    background:#ffffff;
+            <strong>10:00 AM</strong>
 
-    border-radius:18px;
+            <span>Design Review Meeting</span>
 
-    padding:25px;
+        </div>
 
-    border:1px solid #e5e7eb;
+        <div class="schedule-item">
 
-    box-shadow:0 8px 25px rgba(15,23,42,.06);
+            <strong>11:30 AM</strong>
 
-}
+            <span>Client Coordination Call</span>
 
-/*==================================================
-                SCHEDULE
-====================================================*/
+        </div>
 
-.schedule-item{
+        <div class="schedule-item">
 
-    display:flex;
+            <strong>02:00 PM</strong>
 
-    gap:20px;
+            <span>Manufacturing Progress Review</span>
 
-    padding:16px 0;
+        </div>
 
-    border-bottom:1px solid #edf2f7;
+        <div class="schedule-item">
 
-}
+            <strong>04:30 PM</strong>
 
-.schedule-item strong{
+            <span>Dispatch Planning Meeting</span>
 
-    width:90px;
+        </div>
 
-    color:#2563eb;
+    </div>
 
-}
+    <!-- CRITICAL ALERTS -->
 
-.schedule-item span{
+    <div class="footer-panel">
 
-    color:#334155;
+        <div class="panel-header">
 
-}
+            <h2>Critical Alerts</h2>
 
-/*==================================================
-                ALERTS
-====================================================*/
+        </div>
 
-.alert-item{
+        <div class="alert-item">
 
-    padding:15px;
+            🔴 AIIMS Delhi Drawing Approval Pending
 
-    margin-bottom:12px;
+        </div>
 
-    border-radius:10px;
+        <div class="alert-item">
 
-    background:#f8fafc;
+            🟠 Taj Hotel Dispatch Tomorrow
 
-    transition:.25s;
+        </div>
 
-    cursor:pointer;
+        <div class="alert-item">
 
-}
+            🟡 Infosys BOQ Revision Awaiting Approval
 
-.alert-item:hover{
+        </div>
 
-    background:#eff6ff;
+        <div class="alert-item">
 
-    transform:translateX(5px);
+            🔵 TCS Hyderabad Client Meeting Today
 
-}
+        </div>
+
+    </div>
+
+</div>
