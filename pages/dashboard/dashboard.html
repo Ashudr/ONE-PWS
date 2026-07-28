@@ -46,7 +46,14 @@
 
 </head>
 
+<script src="../../assets/js/database.js"></script>
+
+<script src="../../assets/js/dashboardloader.js"></script>
+
+<script src="../../assets/js/dashboard.js"></script>
+
 <body>
+    
 <h1 style="color:red;font-size:60px;">
 THIS IS MY NEW DASHBOARD
 </h1>
@@ -243,7 +250,7 @@ KPI CARDS
 
         <div class="kpi-content">
 
-            <h2>125</h2>
+            <h2 id="kpiTotalProjects">0</h2>
 
             <p>Total Projects</p>
 
@@ -488,7 +495,7 @@ RECENT PROJECTS
 
             </thead>
 
-            <tbody>
+            <tbody id="recentProjectsBody">
 
                 <tr>
 
