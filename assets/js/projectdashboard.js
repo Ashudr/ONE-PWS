@@ -1,109 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+"use strict";
 
-<head>
+/*==================================================
+        ONEPWS PROJECT DASHBOARD
+==================================================*/
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+document.addEventListener("DOMContentLoaded", initializeProjectDashboard);
 
-<title>ONEPWS | Project Dashboard</title>
+/*==================================================
+        INITIALIZE
+==================================================*/
 
-<link rel="stylesheet" href="../../assets/css/style.css">
-<link rel="stylesheet" href="../../assets/css/projectdashboard.css">
+function initializeProjectDashboard() {
 
-</head>
+    loadProjectInformation();
 
-<body>
+}
 
-<div class="project-dashboard">
+/*==================================================
+        LOAD PROJECT
+==================================================*/
 
-    <!-- ===========================
-         PROJECT HEADER
-    ============================ -->
+function loadProjectInformation() {
 
-    <header class="project-header">
+    const projects = getProjects();
 
-        <div>
+    if (projects.length === 0)
+        return;
 
-            <h1 id="projectName">
-                Project Name
-            </h1>
+    const project = projects[projects.length - 1];
 
-            <p id="projectNumber">
-                SAP-2026-0001
-            </p>
+    document.getElementById("projectName").innerText =
+        project.projectName;
 
-        </div>
+    document.getElementById("projectNumber").innerText =
+        project.projectNumber;
 
-        <div>
+    document.getElementById("customerName").innerText =
+        project.customer;
 
-            <button id="backToBoard">
-                ← Project Board
-            </button>
+    document.getElementById("projectManager").innerText =
+        project.projectManager;
 
-        </div>
+    document.getElementById("projectPriority").innerText =
+        project.priority;
 
-    </header>
+    document.getElementById("startDate").innerText =
+        project.startDate;
 
-    <!-- ===========================
-         PROJECT INFORMATION
-    ============================ -->
+    document.getElementById("endDate").innerText =
+        project.endDate;
 
-    <section class="project-info">
-
-        <div class="info-card">
-            <h3>Customer</h3>
-            <p id="customerName">-</p>
-        </div>
-
-        <div class="info-card">
-            <h3>Template</h3>
-            <p id="projectTemplate">-</p>
-        </div>
-
-        <div class="info-card">
-            <h3>Project Manager</h3>
-            <p id="projectManager">-</p>
-        </div>
-
-        <div class="info-card">
-            <h3>Priority</h3>
-            <p id="projectPriority">-</p>
-        </div>
-
-        <div class="info-card">
-            <h3>Start Date</h3>
-            <p id="startDate">-</p>
-        </div>
-
-        <div class="info-card">
-            <h3>End Date</h3>
-            <p id="endDate">-</p>
-        </div>
-
-    </section>
-
-    <!-- ===========================
-         MODULES
-    ============================ -->
-
-    <section class="module-section">
-
-        <h2>Project Modules</h2>
-
-        <div
-            class="module-grid"
-            id="moduleGrid">
-
-        </div>
-
-    </section>
-
-</div>
-
-<script src="../../assets/js/database.js"></script>
-<script src="../../assets/js/projectdashboard.js"></script>
-
-</body>
-
-</html>
+}
