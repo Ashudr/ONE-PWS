@@ -94,3 +94,39 @@ function clearDatabase() {
     localStorage.removeItem(DATABASE_KEY);
 
 }
+
+/*==================================================
+        CURRENT PROJECT
+==================================================*/
+
+const CURRENT_PROJECT_KEY = "ONEPWS_CURRENT_PROJECT";
+
+/*==================================================
+        SET CURRENT PROJECT
+==================================================*/
+
+function setCurrentProject(projectNumber) {
+
+    localStorage.setItem(
+
+        CURRENT_PROJECT_KEY,
+
+        projectNumber
+
+    );
+
+}
+
+/*==================================================
+        GET CURRENT PROJECT
+==================================================*/
+
+function getCurrentProject() {
+
+    return localStorage.getItem(
+
+        CURRENT_PROJECT_KEY
+
+    );
+
+}
