@@ -483,13 +483,21 @@ function loadReview(){
 CREATE PROJECT
 ========================================================== */
 
-function createProject(){
+function createProject() {
+
+    /* Save Project */
+
+    saveProject(newProject);
+
+    /* Success Message */
 
     alert("Project Created Successfully.");
 
+    /* Open Dashboard */
+
     window.location.href =
-        "../projectdashboard/projectdashboard.html";
-z
+        "../dashboard/dashboard.html";
+
 }
 
 /* ==========================================================
