@@ -485,18 +485,7 @@ CREATE PROJECT
 
 function createProject() {
 
-    /* Save Project */
-
-    saveProject(newProject);
-
-    /* Success Message */
-
-    alert("Project Created Successfully.");
-
-    /* Open Dashboard */
-
-    window.location.href =
-        "../dashboard/dashboard.html";
+    alert("THIS IS THE NEW CREATE PROJECT FUNCTION");
 
 }
 
