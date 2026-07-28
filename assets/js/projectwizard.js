@@ -485,7 +485,11 @@ CREATE PROJECT
 
 function createProject() {
 
-    alert("THIS IS THE NEW CREATE PROJECT FUNCTION");
+    saveProject(newProject);
+
+    alert("Project Created Successfully.");
+
+    window.location.href = "../dashboard/dashboard.html";
 
 }
 
