@@ -10,17 +10,21 @@
 
 body{
 
-    font-family:Poppins,sans-serif;
-    background:#f5f7fb;
+    font-family:Poppins,Arial,sans-serif;
+
+    background:#f4f7fb;
+
     color:#1f2937;
 
 }
 
 .project-dashboard{
 
+    width:95%;
+
     max-width:1500px;
-    margin:auto;
-    padding:30px;
+
+    margin:30px auto;
 
 }
 
@@ -31,42 +35,46 @@ body{
 .project-header{
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     background:#ffffff;
 
     padding:25px 35px;
 
-    border-radius:18px;
+    border-radius:15px;
 
-    box-shadow:0 8px 25px rgba(15,23,42,.08);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 
-    margin-bottom:30px;
+    margin-bottom:25px;
 
 }
 
 .project-header h1{
 
-    font-size:32px;
-    color:#1e3a8a;
+    font-size:30px;
+
+    color:#1d4ed8;
 
 }
 
 .project-header p{
 
-    margin-top:8px;
     color:#6b7280;
+
+    margin-top:6px;
 
 }
 
 #backToBoard{
 
-    border:none;
-
     background:#2563eb;
 
     color:white;
+
+    border:none;
 
     padding:12px 22px;
 
@@ -87,40 +95,40 @@ body{
 }
 
 /*==================================================
-        PROJECT INFO
+        INFORMATION CARDS
 ==================================================*/
 
 .project-info{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
     gap:20px;
 
-    margin-bottom:35px;
+    margin-bottom:30px;
 
 }
 
 .info-card{
 
-    background:#ffffff;
+    background:white;
 
     padding:22px;
 
-    border-radius:16px;
+    border-radius:14px;
 
-    box-shadow:0 5px 18px rgba(0,0,0,.05);
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
 
 }
 
 .info-card h3{
 
-    font-size:15px;
-
     color:#6b7280;
 
     margin-bottom:10px;
+
+    font-size:14px;
 
 }
 
@@ -135,26 +143,26 @@ body{
 }
 
 /*==================================================
-        MODULES
+        MODULE SECTION
 ==================================================*/
 
 .module-section{
 
     background:white;
 
-    padding:30px;
+    border-radius:15px;
 
-    border-radius:18px;
+    padding:25px;
 
-    box-shadow:0 5px 20px rgba(0,0,0,.05);
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
 
 }
 
 .module-section h2{
 
-    margin-bottom:25px;
+    color:#1d4ed8;
 
-    color:#1e3a8a;
+    margin-bottom:20px;
 
 }
 
@@ -170,25 +178,23 @@ body{
 
 .module-card{
 
+    background:#f9fafb;
+
     border:1px solid #e5e7eb;
 
-    border-radius:14px;
+    border-radius:12px;
 
-    padding:20px;
+    padding:18px;
 
     transition:.25s;
-
-    cursor:pointer;
-
-    background:#fafafa;
 
 }
 
 .module-card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
-    box-shadow:0 8px 20px rgba(37,99,235,.15);
+    box-shadow:0 8px 18px rgba(37,99,235,.15);
 
 }
 
