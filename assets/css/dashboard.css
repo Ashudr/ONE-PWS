@@ -662,3 +662,318 @@ body{
     color:#dc2626;
 
 }
+
+/*==================================================
+            DASHBOARD MIDDLE
+====================================================*/
+
+.dashboard-middle{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.chart-panel,
+.quick-panel{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 8px 25px rgba(15,23,42,.06);
+
+    border:1px solid #e5e7eb;
+
+}
+
+/*==================================================
+            PANEL HEADER
+====================================================*/
+
+.panel-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.panel-header h2{
+
+    font-size:22px;
+
+    color:#0f172a;
+
+}
+
+.panel-button{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.panel-button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/*==================================================
+            CHART PLACEHOLDER
+====================================================*/
+
+.chart-placeholder{
+
+    height:320px;
+
+    border:2px dashed #cbd5e1;
+
+    border-radius:16px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:22px;
+
+}
+
+.chart-placeholder h3{
+
+    margin-top:15px;
+
+    color:#1e293b;
+
+}
+
+.chart-placeholder p{
+
+    margin-top:8px;
+
+    font-size:14px;
+
+}
+
+/*==================================================
+            QUICK ACTIONS
+====================================================*/
+
+.action-btn{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    background:#f8fafc;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding-left:20px;
+
+    transition:.25s;
+
+}
+
+.action-btn:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+    transform:translateX(5px);
+
+}
+
+.action-btn i{
+
+    width:22px;
+
+}
+
+/*==================================================
+            RECENT PROJECTS
+====================================================*/
+
+.dashboard-bottom{
+
+    margin-top:30px;
+
+}
+
+.projects-panel{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 8px 25px rgba(15,23,42,.06);
+
+    border:1px solid #e5e7eb;
+
+}
+
+.project-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+.project-table th{
+
+    background:#f8fafc;
+
+    padding:15px;
+
+    text-align:left;
+
+    font-size:14px;
+
+    color:#475569;
+
+}
+
+.project-table td{
+
+    padding:16px;
+
+    border-bottom:1px solid #eef2f7;
+
+    font-size:14px;
+
+}
+
+.project-table tbody tr{
+
+    transition:.25s;
+
+}
+
+.project-table tbody tr:hover{
+
+    background:#f8fbff;
+
+}
+
+.progress-bar{
+
+    width:120px;
+
+    height:8px;
+
+    background:#e2e8f0;
+
+    border-radius:10px;
+
+    margin-bottom:6px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:#2563eb;
+
+    border-radius:10px;
+
+}
+
+.status{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.running{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+}
+
+.design{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+}
+
+.qc{
+
+    background:#fef3c7;
+
+    color:#92400e;
+
+}
+
+.manufacture{
+
+    background:#ede9fe;
+
+    color:#6d28d9;
+
+}
