@@ -3,187 +3,249 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>ONEPWS Dashboard</title>
+    <title>ONEPWS | Dashboard</title>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+    <!-- Google Font -->
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-<link rel="stylesheet"
-href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
-<link rel="stylesheet"
-href="../../assets/css/dashboard.css">
+    <!-- Font Awesome -->
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../../assets/css/base.css">
+
+    <link rel="stylesheet"
+          href="../../assets/css/theme.css">
+
+    <link rel="stylesheet"
+          href="../../assets/css/layout.css">
+
+    <link rel="stylesheet"
+          href="../../assets/css/components.css">
+
+    <link rel="stylesheet"
+          href="../../assets/css/dashboard.css">
 
 </head>
 
 <body>
 
-<div class="sidebar">
+<div class="dashboard-wrapper">
 
-<div class="logo">
+<!-- ===========================================================
+TOP HEADER
+=========================================================== -->
 
-<img src="../../assets/images/onepws-logo.png">
+<header class="top-header">
 
-</div>
+    <div class="header-left">
 
-<ul>
+        <img src="../../assets/images/onepws-logo.png"
+             class="logo">
 
-<li class="active">
-<i class="fa-solid fa-chart-line"></i>
-Dashboard
-</li>
+        <div>
 
-<li>
-<i class="fa-solid fa-folder"></i>
-Project Board
-</li>
+            <h2>ONEPWS</h2>
 
-<li>
-<i class="fa-solid fa-chart-pie"></i>
-Progress Board
-</li>
+            <span>
+                Enterprise Project Management System
+            </span>
 
-<li>
-<i class="fa-solid fa-table-columns"></i>
-Task Board
-</li>
+        </div>
 
-<li>
-<i class="fa-solid fa-users"></i>
-Users
-</li>
+    </div>
 
-<li>
-<i class="fa-solid fa-gear"></i>
-Settings
-</li>
+    <div class="header-center">
 
-<li>
-<i class="fa-solid fa-right-from-bracket"></i>
-Logout
-</li>
+        <div class="search-box">
 
-</ul>
+            <i class="fa-solid fa-magnifying-glass"></i>
 
-</div>
+            <input type="text"
+                   placeholder="Search Projects, Customers, Users...">
 
-<div class="main">
+        </div>
 
-<header>
+    </div>
 
-<div>
+    <div class="header-right">
 
-<h2>Dashboard</h2>
+        <button class="icon-button">
 
-<p>Enterprise Project Management System</p>
+            <i class="fa-regular fa-bell"></i>
 
-</div>
+            <span class="notification-count">
 
-<div class="top-right">
+                5
 
-<input
-type="text"
-placeholder="Search...">
+            </span>
 
-<i class="fa-solid fa-bell"></i>
+        </button>
 
-<div class="profile">
+        <button class="icon-button">
 
-Admin
+            <i class="fa-regular fa-envelope"></i>
 
-</div>
+            <span class="notification-count">
 
-</div>
+                2
+
+            </span>
+
+        </button>
+
+        <div class="profile-box">
+
+            <img src="../../assets/images/profile.png">
+
+            <div>
+
+                <strong>Ashu</strong>
+
+                <small>Administrator</small>
+
+            </div>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </div>
+
+    </div>
 
 </header>
 
-<section class="cards">
+<!-- ===========================================================
+MAIN
+=========================================================== -->
 
-<div class="card">
+<div class="dashboard-main">
 
-<h3>Total Projects</h3>
+<!-- ===========================================================
+SIDEBAR
+=========================================================== -->
 
-<h1>128</h1>
+<aside class="sidebar">
+
+    <div class="menu-title">
+
+        MAIN MENU
+
+    </div>
+
+    <a class="menu-item active">
+
+        <i class="fa-solid fa-table-columns"></i>
+
+        Dashboard
+
+    </a>
+
+    <a class="menu-item">
+
+        <i class="fa-solid fa-diagram-project"></i>
+
+        Project Board
+
+    </a>
+
+    <a class="menu-item">
+
+        <i class="fa-solid fa-list-check"></i>
+
+        Task Board
+
+    </a>
+
+    <a class="menu-item">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        Progress Board
+
+    </a>
+
+    <a class="menu-item">
+
+        <i class="fa-solid fa-chart-pie"></i>
+
+        Reports
+
+    </a>
+
+    <a class="menu-item">
+
+        <i class="fa-solid fa-users"></i>
+
+        Users
+
+    </a>
+
+    <a class="menu-item">
+
+        <i class="fa-solid fa-gear"></i>
+
+        Settings
+
+    </a>
+
+    <a class="menu-item logout">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+    </a>
+
+</aside>
+
+<!-- ===========================================================
+CONTENT
+=========================================================== -->
+
+<section class="dashboard-content">
+
+<div class="welcome-banner">
+
+    <div>
+
+        <h1>
+
+            Welcome Back, Ashu 👋
+
+        </h1>
+
+        <p>
+
+            Here is today's overview of your organization.
+
+        </p>
+
+    </div>
+
+    <button class="primary-btn">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Create New Project
+
+    </button>
 
 </div>
-
-<div class="card">
-
-<h3>Open Tasks</h3>
-
-<h1>356</h1>
-
-</div>
-
-<div class="card">
-
-<h3>Critical Tasks</h3>
-
-<h1>12</h1>
-
-</div>
-
-<div class="card">
-
-<h3>Completion</h3>
-
-<h1>86%</h1>
-
-</div>
-
-</section>
-
-<section class="dashboard-grid">
-
-<div class="panel">
-
-<h3>Project Completion</h3>
-
-<canvas id="projectChart"></canvas>
-
-</div>
-
-<div class="panel">
-
-<h3>Recent Activity</h3>
-
-<ul>
-
-<li>Layout Approved</li>
-
-<li>QC Completed</li>
-
-<li>Project Assigned</li>
-
-<li>Material Dispatched</li>
-
-</ul>
-
-</div>
-
-</section>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script src="../../assets/js/dashboard.js"></script>
-
-</body>
-
-</html>
