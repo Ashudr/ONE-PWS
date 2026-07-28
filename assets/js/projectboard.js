@@ -58,10 +58,20 @@ function initializeButtons() {
 
     if (newProjectButton) {
 
-       newProjectButton.addEventListener("click", function () {
+       newProjectbutton.addEventListener("click", function () {
+
+    const projectCard =
+        this.closest(".project-card");
+
+    const projectNumber =
+        projectCard.querySelector("p").innerText
+        .replace("Project ID :", "")
+        .trim();
+
+    setCurrentProject(projectNumber);
 
     window.location.href =
-        "../projectwizard/projectwizard.html";
+        "../projectdashboard/projectdashboard.html";
 
 });
 
