@@ -96,6 +96,42 @@ function showMessage(message){
 
     initializeSearch();
 
+    /*==========================================================
+SEARCH ENGINE
+==========================================================*/
+
+function initializeSearch(){
+
+    const searchBox=document.getElementById("searchTask");
+
+    if(!searchBox) return;
+
+    searchBox.addEventListener("keyup",function(){
+
+        const keyword=this.value.toLowerCase();
+
+        const cards=document.querySelectorAll(".task-card");
+
+        cards.forEach(function(card){
+
+            if(card.innerText.toLowerCase().includes(keyword)){
+
+                card.style.display="block";
+
+            }
+
+            else{
+
+                card.style.display="none";
+
+            }
+
+        });
+
+    });
+
+}
+
     initializeModal();
 
     initializeDragDrop();
