@@ -194,78 +194,167 @@ KPI DASHBOARD
 KANBAN BOARD
 ========================================================== -->
 
-    <main class="board-container">
+<main class="board-container">
 
-        <!-- RFQ -->
+    <!-- ================= RFQ ================= -->
 
-        <section class="lane">
+    <section class="lane">
+
+        <div class="lane-header blue">
 
             <h2>RFQ</h2>
 
-            <div class="task-card">
+            <span>12</span>
 
-                <h3>PAR-001</h3>
+        </div>
 
-                <p>Partition Layout</p>
+        <div class="task-card">
 
-                <small>Assigned : Ashu</small>
+            <div class="task-number">
+
+                PAR-001
 
             </div>
 
-        </section>
+            <h3>
 
-        <!-- INFO -->
+                Partition Layout
 
-        <section class="lane">
+            </h3>
+
+            <div class="progress">
+
+                <div class="progress-bar"
+                     style="width:70%;"></div>
+
+            </div>
+
+            <div class="task-footer">
+
+                <span>👤 Ashu</span>
+
+                <span>🔴 High</span>
+
+            </div>
+
+            <small>
+
+                📅 28-Jul-2026
+
+            </small>
+
+        </div>
+
+    </section>
+
+    <!-- ================= INFO ================= -->
+
+    <section class="lane">
+
+        <div class="lane-header orange">
 
             <h2>INFO MISSING</h2>
 
-        </section>
+            <span>4</span>
 
-        <!-- WIP -->
+        </div>
 
-        <section class="lane">
+    </section>
+
+    <!-- ================= WIP ================= -->
+
+    <section class="lane">
+
+        <div class="lane-header yellow">
 
             <h2>WIP</h2>
 
-            <div class="task-card">
+            <span>18</span>
 
-                <h3>CEL-012</h3>
+        </div>
 
-                <p>Ceiling Shop Drawing</p>
+        <div class="task-card">
 
-                <small>Assigned : Design Team</small>
+            <div class="task-number">
+
+                CEL-012
 
             </div>
 
-        </section>
+            <h3>
 
-        <!-- QC -->
+                Ceiling Shop Drawing
 
-        <section class="lane">
+            </h3>
+
+            <div class="progress">
+
+                <div class="progress-bar"
+                     style="width:45%;"></div>
+
+            </div>
+
+            <div class="task-footer">
+
+                <span>👤 Design Team</span>
+
+                <span>🟠 Medium</span>
+
+            </div>
+
+            <small>
+
+                📅 30-Jul-2026
+
+            </small>
+
+        </div>
+
+    </section>
+
+    <!-- ================= QC ================= -->
+
+    <section class="lane">
+
+        <div class="lane-header purple">
 
             <h2>QUALITY CHECK</h2>
 
-        </section>
+            <span>6</span>
 
-        <!-- RESOLUTION -->
+        </div>
 
-        <section class="lane">
+    </section>
+
+    <!-- ================= RESOLUTION ================= -->
+
+    <section class="lane">
+
+        <div class="lane-header red">
 
             <h2>RESOLUTION</h2>
 
-        </section>
+            <span>3</span>
 
-        <!-- COMPLETED -->
+        </div>
 
-        <section class="lane">
+    </section>
+
+    <!-- ================= COMPLETED ================= -->
+
+    <section class="lane">
+
+        <div class="lane-header green">
 
             <h2>COMPLETED</h2>
 
-        </section>
+            <span>56</span>
 
-    </main>
+        </div>
 
+    </section>
+
+</main>
     <!-- ================= TASK POPUP ================= -->
 
     <div id="taskModal" class="modal">
