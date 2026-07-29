@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Temporary login
         // Later this will be replaced with PHP + MySQL authentication
 
-        window.location.href = "pages/projectboard/projectboard.html";
+        window.location.href = "pages/dashboard/dashboard.html";
 
     });
 
