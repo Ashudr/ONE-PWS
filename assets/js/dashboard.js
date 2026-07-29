@@ -28,6 +28,21 @@ function initializeDashboardButtons() {
 
     }
 
+// Sidebar Reports
+
+const reportsMenu =
+    document.getElementById("reportsMenu");
+
+if (reportsMenu) {
+
+    reportsMenu.addEventListener("click", function () {
+
+        alert("Reports Module - Coming Soon");
+
+    });
+
+}
+
     // Banner Create Project
 
 const bannerProject =
