@@ -833,3 +833,49 @@ TASK CARD V2
     box-shadow:0 18px 35px rgba(37,99,235,.15);
 
 }
+
+/*==========================================================
+SEARCH BOX
+==========================================================*/
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:white;
+
+    border:1px solid #d8e2f0;
+
+    border-radius:10px;
+
+    padding:0 15px;
+
+    width:320px;
+
+    height:42px;
+
+}
+
+.search-box i{
+
+    color:#64748b;
+
+}
+
+.search-box input{
+
+    border:none;
+
+    outline:none;
+
+    width:100%;
+
+    font-size:14px;
+
+    background:transparent;
+
+}
