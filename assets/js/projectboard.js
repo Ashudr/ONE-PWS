@@ -52,35 +52,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initializeButtons() {
 
+    // ===========================
     // New Project
+    // ===========================
 
-    const newProjectButton = document.getElementById("newProject");
+    const newProjectButton =
+        document.getElementById("newProject");
 
     if (newProjectButton) {
 
-       newProjectbutton.addEventListener("click", function () {
+        newProjectButton.addEventListener("click", function () {
 
-    const projectCard = this.closest(".project-card");
+            window.location.href =
+                "../projectwizard/projectwizard.html";
 
-    const projectNumber = projectCard
-        .querySelector("p")
-        .innerText
-        .replace("Project ID :", "")
-        .trim();
-
-    setCurrentProject(projectNumber);
-
-    window.location.href =
-        "../projectdashboard/projectdashboard.html";
-
-});
+        });
 
     }
 
-
+    // ===========================
     // Notification
+    // ===========================
 
-    const notificationButton = document.getElementById("notificationBtn");
+    const notificationButton =
+        document.getElementById("notificationBtn");
 
     if (notificationButton) {
 
@@ -92,10 +87,12 @@ function initializeButtons() {
 
     }
 
-
+    // ===========================
     // Profile
+    // ===========================
 
-    const profileButton = document.getElementById("profileBtn");
+    const profileButton =
+        document.getElementById("profileBtn");
 
     if (profileButton) {
 
@@ -107,23 +104,27 @@ function initializeButtons() {
 
     }
 
-
+    // ===========================
     // Open Project
+    // ===========================
 
-    const openButtons = document.querySelectorAll(".openProject");
+    const openButtons =
+        document.querySelectorAll(".openProject");
 
     openButtons.forEach(function (button) {
 
         button.addEventListener("click", function () {
 
             window.location.href =
-                "../projectprogress/projectprogress.html";
+                "../projectdashboard/projectdashboard.html";
 
         });
 
     });
 
 }
+
+    }
 
 
 /* ==========================================================
