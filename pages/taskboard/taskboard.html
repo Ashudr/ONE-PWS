@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,44 +23,135 @@
 
 <body>
 
-<!-- ==========================================================
-HEADER
-========================================================== -->
+<div class="app-layout">
 
-<header class="top-header">
+    <!-- Sidebar Placeholder -->
 
-    <div class="logo-area">
+    <aside class="sidebar">
+
+    <div class="sidebar-header">
 
         <img src="../../assets/images/onepws-logo.png"
-             alt="ONEPWS Logo">
+             alt="ONEPWS">
 
-        <div>
-
-            <h1>ONEPWS</h1>
-
-            <span>Enterprise Project Management System</span>
-
-        </div>
+        <h2>ONEPWS</h2>
 
     </div>
 
-    <div class="header-right">
+    <nav class="sidebar-menu">
 
-        <button id="notificationBtn"
-                class="icon-btn">
+        <a href="../dashboard/dashboard.html"
+           class="menu-item">
+
+            <i class="fa-solid fa-table-columns"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+        <a href="../projectboard/projectboard.html"
+           class="menu-item">
+
+            <i class="fa-solid fa-diagram-project"></i>
+
+            <span>Project Board</span>
+
+        </a>
+
+        <a href="../taskboard/taskboard.html"
+           class="menu-item active">
+
+            <i class="fa-solid fa-list-check"></i>
+
+            <span>Task Board</span>
+
+        </a>
+
+        <a href="../projectprogress/projectprogress.html"
+           class="menu-item">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Project Progress</span>
+
+        </a>
+
+        <a href="#"
+           id="reportsBtn"
+           class="menu-item">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+        <a href="#"
+           class="menu-item">
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>Users</span>
+
+        </a>
+
+        <a href="#"
+           class="menu-item">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+
+        <a href="../auth/login.html"
+           class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header Placeholder -->
+
+        <header class="page-header">
+
+    <div>
+
+        <h1>Task Board</h1>
+
+        <p>
+            Manage and monitor all project tasks.
+        </p>
+
+    </div>
+
+    <div class="header-actions">
+
+        <button id="notificationBtn">
 
             <i class="fa-solid fa-bell"></i>
 
         </button>
 
-        <button id="profileBtn"
-                class="profile-btn">
+        <button id="profileBtn">
 
-            <i class="fa-solid fa-circle-user"></i>
+            <i class="fa-solid fa-user"></i>
 
             Ashu
-
-            <i class="fa-solid fa-angle-down"></i>
 
         </button>
 
@@ -68,355 +159,30 @@ HEADER
 
 </header>
 
-<!-- ==========================================================
-BREADCRUMB
-========================================================== -->
+        <!-- Toolbar Placeholder -->
 
-<section class="breadcrumb">
+        <section class="toolbar">
 
-    <span>Dashboard</span>
+        </section>
 
-    <i class="fa-solid fa-angle-right"></i>
+        <!-- KPI Placeholder -->
 
-    <span>Project Board</span>
+        <section class="kpi-container">
 
-    <i class="fa-solid fa-angle-right"></i>
+        </section>
 
-    <span>Project Dashboard</span>
+        <!-- Kanban Placeholder -->
 
-    <i class="fa-solid fa-angle-right"></i>
+        <section class="kanban-container">
 
-    <strong>Task Board</strong>
+        </section>
 
-</section>
+    </main>
 
-<!-- ==========================================================
-TOOLBAR
-========================================================== -->
+</div>
 
-<section class="toolbar">
-
-    <div class="toolbar-left">
-
-        <button id="backBtn"
-                class="secondary-btn">
-
-            <i class="fa-solid fa-arrow-left"></i>
-
-            Project Dashboard
-
-        </button>
-
-        <button id="newTaskBtn"
-                class="primary-btn">
-
-            <i class="fa-solid fa-plus"></i>
-
-            New Task
-
-        </button>
-
-        <button id="childTaskBtn"
-                class="secondary-btn">
-
-            <i class="fa-solid fa-diagram-project"></i>
-
-            Child Task
-
-        </button>
-
-    </div>
-
-    <div class="toolbar-right">
-
-        <input
-            type="text"
-            id="searchTask"
-            placeholder="Search Task...">
-
-        <button class="secondary-btn">
-
-            <i class="fa-solid fa-filter"></i>
-
-            Filter
-
-        </button>
-
-        <button class="secondary-btn">
-
-            <i class="fa-solid fa-file-export"></i>
-
-            Export
-
-        </button>
-
-        <button class="secondary-btn">
-
-            <i class="fa-solid fa-rotate-right"></i>
-
-            Refresh
-
-        </button>
-
-    </div>
-
-</section>
-
-<!-- ==========================================================
-KPI DASHBOARD
-========================================================== -->
-
-<section class="kpi-container">
-
-    <div class="kpi-card">
-
-        <span>Total Tasks</span>
-
-        <h2>120</h2>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <span>Running</span>
-
-        <h2>38</h2>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <span>Completed</span>
-
-        <h2>62</h2>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <span>Critical</span>
-
-        <h2>12</h2>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <span>Overdue</span>
-
-        <h2>8</h2>
-
-    </div>
-
-</section>
-
-<!-- ==========================================================
-KANBAN BOARD
-========================================================== -->
-
-<main class="board-container">
-
-    <!-- ================= RFQ ================= -->
-
-    <section class="lane">
-
-        <div class="lane-header blue">
-
-            <h2>RFQ</h2>
-
-            <span>12</span>
-
-        </div>
-
-        <div class="task-card">
-
-            <div class="task-number">
-
-                PAR-001
-
-            </div>
-
-            <h3>
-
-                Partition Layout
-
-            </h3>
-
-            <div class="progress">
-
-                <div class="progress-bar"
-                     style="width:70%;"></div>
-
-            </div>
-
-            <div class="task-footer">
-
-                <span>👤 Ashu</span>
-
-                <span>🔴 High</span>
-
-            </div>
-
-            <small>
-
-                📅 28-Jul-2026
-
-            </small>
-
-        </div>
-
-    </section>
-
-    <!-- ================= INFO ================= -->
-
-    <section class="lane">
-
-        <div class="lane-header orange">
-
-            <h2>INFO MISSING</h2>
-
-            <span>4</span>
-
-        </div>
-
-    </section>
-
-    <!-- ================= WIP ================= -->
-
-    <section class="lane">
-
-        <div class="lane-header yellow">
-
-            <h2>WIP</h2>
-
-            <span>18</span>
-
-        </div>
-
-        <div class="task-card">
-
-            <div class="task-number">
-
-                CEL-012
-
-            </div>
-
-            <h3>
-
-                Ceiling Shop Drawing
-
-            </h3>
-
-            <div class="progress">
-
-                <div class="progress-bar"
-                     style="width:45%;"></div>
-
-            </div>
-
-            <div class="task-footer">
-
-                <span>👤 Design Team</span>
-
-                <span>🟠 Medium</span>
-
-            </div>
-
-            <small>
-
-                📅 30-Jul-2026
-
-            </small>
-
-        </div>
-
-    </section>
-
-    <!-- ================= QC ================= -->
-
-    <section class="lane">
-
-        <div class="lane-header purple">
-
-            <h2>QUALITY CHECK</h2>
-
-            <span>6</span>
-
-        </div>
-
-    </section>
-
-    <!-- ================= RESOLUTION ================= -->
-
-    <section class="lane">
-
-        <div class="lane-header red">
-
-            <h2>RESOLUTION</h2>
-
-            <span>3</span>
-
-        </div>
-
-    </section>
-
-    <!-- ================= COMPLETED ================= -->
-
-    <section class="lane">
-
-        <div class="lane-header green">
-
-            <h2>COMPLETED</h2>
-
-            <span>56</span>
-
-        </div>
-
-    </section>
-
-</main>
-    <!-- ================= TASK POPUP ================= -->
-
-    <div id="taskModal" class="modal">
-
-        <div class="modal-content">
-
-            <span id="closeModal">&times;</span>
-
-            <h2>Task Details</h2>
-
-            <hr>
-
-            <p>
-
-                This popup will later contain:
-
-            </p>
-
-            <ul>
-
-                <li>General Information</li>
-
-                <li>Description</li>
-
-                <li>Attachments</li>
-
-                <li>Comments</li>
-
-                <li>Child Tasks</li>
-
-                <li>History</li>
-
-                <li>Approval Log</li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-    <script src="../../assets/js/taskboard.js"></script>
+<script src="../../assets/js/database.js"></script>
+<script src="../../assets/js/taskboard.js"></script>
 
 </body>
-
 </html>
