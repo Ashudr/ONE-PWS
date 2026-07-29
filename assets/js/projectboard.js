@@ -52,30 +52,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initializeButtons() {
 
-    // ===========================
     // New Project
-    // ===========================
 
-    const newProjectButton =
-        document.getElementById("newProject");
+    const newProjectButton = document.getElementById("newProject");
 
     if (newProjectButton) {
 
-        newProjectButton.addEventListener("click", function () {
+       newProjectButton.addEventListener("click", function () {
 
-            window.location.href =
-                "../projectwizard/projectwizard.html";
+    alert("Open Project button clicked.");
 
-        });
+});
 
     }
 
-    // ===========================
-    // Notification
-    // ===========================
 
-    const notificationButton =
-        document.getElementById("notificationBtn");
+    // Notification
+
+    const notificationButton = document.getElementById("notificationBtn");
 
     if (notificationButton) {
 
@@ -87,12 +81,10 @@ function initializeButtons() {
 
     }
 
-    // ===========================
-    // Profile
-    // ===========================
 
-    const profileButton =
-        document.getElementById("profileBtn");
+    // Profile
+
+    const profileButton = document.getElementById("profileBtn");
 
     if (profileButton) {
 
@@ -104,27 +96,23 @@ function initializeButtons() {
 
     }
 
-    // ===========================
-    // Open Project
-    // ===========================
 
-    const openButtons =
-        document.querySelectorAll(".openProject");
+    // Open Project
+
+    const openButtons = document.querySelectorAll(".openProject");
 
     openButtons.forEach(function (button) {
 
         button.addEventListener("click", function () {
 
             window.location.href =
-                "../projectdashboard/projectdashboard.html";
+                "../projectprogress/projectprogress.html";
 
         });
 
     });
 
 }
-
-    }
 
 
 /* ==========================================================
