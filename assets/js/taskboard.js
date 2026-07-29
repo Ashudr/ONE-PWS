@@ -1,57 +1,105 @@
+"use strict";
+
 /*==========================================================
-DRAG & DROP
+ONEPWS TASK BOARD ENGINE V2.0
 ==========================================================*/
 
-function initializeDragDrop() {
+document.addEventListener("DOMContentLoaded", initializeTaskBoard);
 
-    const cards = document.querySelectorAll(".task-card");
+/*==========================================================
+APPLICATION STARTUP
+==========================================================*/
 
-    const lanes = document.querySelectorAll(".lane-body");
+function initializeTaskBoard(){
 
-    let draggedCard = null;
+    console.log("ONEPWS Task Board Started");
 
-    cards.forEach(function(card){
+    initializeButtons();
 
-        card.addEventListener("dragstart", function(){
+    /*==========================================================
+BUTTON ENGINE
+==========================================================*/
 
-            draggedCard = this;
+function initializeButtons(){
 
-            setTimeout(() => {
+    const backBtn = document.getElementById("backBtn");
 
-                this.style.opacity = "0.4";
+    if(backBtn){
 
-            },0);
+        backBtn.addEventListener("click",function(){
 
-        });
-
-        card.addEventListener("dragend", function(){
-
-            this.style.opacity = "1";
-
-        });
-
-    });
-
-    lanes.forEach(function(lane){
-
-        lane.addEventListener("dragover", function(event){
-
-            event.preventDefault();
+            window.location.href="../projectdashboard/projectdashboard.html";
 
         });
 
-        lane.addEventListener("drop", function(event){
+    }
 
-            event.preventDefault();
+    const newTaskBtn=document.getElementById("newTaskBtn");
 
-            if(draggedCard){
+    if(newTaskBtn){
 
-                this.appendChild(draggedCard);
+        newTaskBtn.addEventListener("click",function(){
 
-            }
+            showMessage("New Task module coming in Version 2.1");
 
         });
 
-    });
+    }
+
+    const childTaskBtn=document.getElementById("childTaskBtn");
+
+    if(childTaskBtn){
+
+        childTaskBtn.addEventListener("click",function(){
+
+            showMessage("Child Task module coming in Version 2.1");
+
+        });
+
+    }
+
+    const notificationBtn=document.getElementById("notificationBtn");
+
+    if(notificationBtn){
+
+        notificationBtn.addEventListener("click",function(){
+
+            showMessage("Notification Center coming soon.");
+
+        });
+
+    }
+
+    const profileBtn=document.getElementById("profileBtn");
+
+    if(profileBtn){
+
+        profileBtn.addEventListener("click",function(){
+
+            showMessage("Profile module coming soon.");
+
+        });
+
+    }
+
+    
+/*==========================================================
+MESSAGE HELPER
+==========================================================*/
+
+function showMessage(message){
+
+    alert(message);
+
+}
+}
+
+    initializeSearch();
+
+    initializeModal();
+
+    initializeDragDrop();
+
+    updateLaneCounts();
 
 }
