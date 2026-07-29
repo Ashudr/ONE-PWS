@@ -52,19 +52,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initializeButtons() {
 
-    // New Project
+   
 
-    const newProjectButton = document.getElementById("newProject");
+// ===========================
+// New Project
+// ===========================
 
-    if (newProjectButton) {
+const newProjectButton =
+    document.getElementById("newProject");
 
-       newProjectButton.addEventListener("click", function () {
+if (newProjectButton) {
 
-    alert("Open Project button clicked.");
+    newProjectButton.onclick = function () {
 
-});
+        window.location.href =
+            "../projectwizard/projectwizard.html";
 
-    }
+    };
+
+}
 
 
     // Notification
