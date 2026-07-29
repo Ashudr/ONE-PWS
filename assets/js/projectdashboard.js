@@ -14,6 +14,8 @@ function initializeProjectDashboard() {
 
     loadProjectInformation();
 
+    initializeButtons();
+
 }
 
 /*==================================================
@@ -49,5 +51,45 @@ function loadProjectInformation() {
 
     document.getElementById("endDate").innerText =
         project.endDate;
+
+}
+
+/*==================================================
+        BUTTONS
+==================================================*/
+
+function initializeButtons() {
+
+    // Dashboard Button
+
+    const dashboardButton =
+        document.getElementById("goDashboard");
+
+    if (dashboardButton) {
+
+        dashboardButton.addEventListener("click", function () {
+
+            window.location.href =
+                "../dashboard/dashboard.html";
+
+        });
+
+    }
+
+    // Project Board Button
+
+    const boardButton =
+        document.getElementById("backToBoard");
+
+    if (boardButton) {
+
+        boardButton.addEventListener("click", function () {
+
+            window.location.href =
+                "../projectboard/projectboard.html";
+
+        });
+
+    }
 
 }
