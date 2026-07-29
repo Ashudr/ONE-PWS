@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("ONEPWS Project Board Loaded");
 
+    loadProjects();
+
     initializeButtons();
 
     initializeSearch();
@@ -185,3 +187,64 @@ function initializeSearch() {
 // exportProject()
 
 // importProject()
+
+/* ==========================================================
+   LOAD PROJECTS FROM DATABASE
+========================================================== */
+
+function loadProjects() {
+
+    const grid =
+        document.getElementById("projectGrid");
+
+    if (!grid)
+        return;
+
+    grid.innerHTML = "";
+
+    const projects = getProjects();
+
+    if (projects.length === 0) {
+
+        grid.innerHTML =
+            "<h2>No Projects Created Yet</h2>";
+
+        return;
+
+    }
+
+    projects.forEach(function (project) {
+
+        grid.innerHTML += `
+
+        <div class="project-card">
+
+            <div class="project-progress">
+
+                0%
+
+            </div>
+
+            <h2>${project.projectName}</h2>
+
+            <p><strong>Project ID :</strong> ${project.projectNumber}</p>
+
+            <p><strong>Customer :</strong> ${project.customer}</p>
+
+            <p><strong>Project Manager :</strong> ${project.projectManager}</p>
+
+            <p><strong>Status :</strong> 🟢 Running</p>
+
+            <button class="openProject">
+
+                Open Project
+
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+}
