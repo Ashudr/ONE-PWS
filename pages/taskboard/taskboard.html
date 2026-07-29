@@ -1,126 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ONEPWS | Task Board</title>
-
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/taskboard.css">
-
-</head>
-
 <body>
 
-    <!-- ================= HEADER ================= -->
+<!-- ==========================================================
+HEADER
+========================================================== -->
 
-    <header class="top-header">
+<header class="top-header">
 
-        <div class="logo-area">
+    <div class="logo-area">
 
-            <img src="../../assets/images/onepws-logo.png" alt="ONEPWS">
+        <img src="../../assets/images/onepws-logo.png"
+             alt="ONEPWS Logo">
 
-            <div>
+        <div>
 
-                <h2>ONEPWS</h2>
+            <h1>ONEPWS</h1>
 
-                <p>Enterprise Project Management System</p>
-
-            </div>
-
-        </div>
-
-        <div class="header-right">
-
-            <button id="backBtn">
-                ← Project Progress
-            </button>
-
-            <button id="notificationBtn">
-                🔔
-            </button>
-
-            <button id="profileBtn">
-                Ashu ▼
-            </button>
+            <span>Enterprise Project Management System</span>
 
         </div>
 
-    </header>
+    </div>
 
-    <!-- ================= TOOLBAR ================= -->
+    <div class="header-right">
 
-    <section class="toolbar">
+        <button id="notificationBtn"
+                class="icon-btn">
 
-        <button id="newTaskBtn">
-            + New Task
+            <i class="fa-solid fa-bell"></i>
+
         </button>
 
-        <button id="childTaskBtn">
-            + Child Task
+        <button id="profileBtn"
+                class="profile-btn">
+
+            <i class="fa-solid fa-circle-user"></i>
+
+            Ashu
+
+            <i class="fa-solid fa-angle-down"></i>
+
         </button>
+
+    </div>
+
+</header>
+
+<!-- ==========================================================
+BREADCRUMB
+========================================================== -->
+
+<section class="breadcrumb">
+
+    <span>Dashboard</span>
+
+    <i class="fa-solid fa-angle-right"></i>
+
+    <span>Project Board</span>
+
+    <i class="fa-solid fa-angle-right"></i>
+
+    <span>Project Dashboard</span>
+
+    <i class="fa-solid fa-angle-right"></i>
+
+    <strong>Task Board</strong>
+
+</section>
+
+<!-- ==========================================================
+TOOLBAR
+========================================================== -->
+
+<section class="toolbar">
+
+    <div class="toolbar-left">
+
+        <button id="backBtn"
+                class="secondary-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Project Dashboard
+
+        </button>
+
+        <button id="newTaskBtn"
+                class="primary-btn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            New Task
+
+        </button>
+
+        <button id="childTaskBtn"
+                class="secondary-btn">
+
+            <i class="fa-solid fa-diagram-project"></i>
+
+            Child Task
+
+        </button>
+
+    </div>
+
+    <div class="toolbar-right">
 
         <input
             type="text"
             id="searchTask"
             placeholder="Search Task...">
 
-        <button>
+        <button class="secondary-btn">
+
+            <i class="fa-solid fa-filter"></i>
+
             Filter
+
         </button>
 
-        <button>
+        <button class="secondary-btn">
+
+            <i class="fa-solid fa-file-export"></i>
+
             Export
+
         </button>
 
-        <button>
+        <button class="secondary-btn">
+
+            <i class="fa-solid fa-rotate-right"></i>
+
             Refresh
+
         </button>
 
-    </section>
+    </div>
 
-<!-- ================= KPI ================= -->
+</section>
+
+<!-- ==========================================================
+KPI DASHBOARD
+========================================================== -->
 
 <section class="kpi-container">
 
-    <div class="kpi-box">
+    <div class="kpi-card">
 
-        <h3>Total Tasks</h3>
+        <span>Total Tasks</span>
 
         <h2>120</h2>
 
     </div>
 
-    <div class="kpi-box">
+    <div class="kpi-card">
 
-        <h3>In Progress</h3>
+        <span>Running</span>
 
         <h2>38</h2>
 
     </div>
 
-    <div class="kpi-box">
+    <div class="kpi-card">
 
-        <h3>Completed</h3>
+        <span>Completed</span>
 
         <h2>62</h2>
 
     </div>
 
-    <div class="kpi-box">
+    <div class="kpi-card">
 
-        <h3>Critical</h3>
+        <span>Critical</span>
 
         <h2>12</h2>
 
     </div>
 
-    <div class="kpi-box">
+    <div class="kpi-card">
 
-        <h3>Overdue</h3>
+        <span>Overdue</span>
 
         <h2>8</h2>
 
@@ -128,7 +190,9 @@
 
 </section>
 
-    <!-- ================= KANBAN BOARD ================= -->
+<!-- ==========================================================
+KANBAN BOARD
+========================================================== -->
 
     <main class="board-container">
 
