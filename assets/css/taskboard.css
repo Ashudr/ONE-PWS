@@ -386,20 +386,172 @@ KPI
 
 }
 
-/* ==========================================================
-KANBAN
-========================================================== */
+/*==========================================================
+KANBAN BOARD
+==========================================================*/
 
 .kanban-container{
 
-    flex:1;
+    display:grid;
 
-    margin:0 25px 25px;
+    grid-template-columns:repeat(6,minmax(250px,1fr));
 
-    background:white;
+    gap:20px;
+
+    margin:25px;
+
+    height:calc(100vh - 290px);
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    padding-bottom:10px;
+
+}
+
+/*==========================================================
+LANE
+==========================================================*/
+
+.lane{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#eef3fb;
 
     border-radius:18px;
 
-    box-shadow:0 4px 14px rgba(0,0,0,.06);
+    min-width:260px;
+
+    overflow:hidden;
+
+    border:1px solid #d9e4f5;
+
+}
+
+/*==========================================================
+LANE HEADER
+==========================================================*/
+
+.lane-header{
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 18px;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+}
+
+.lane-header .count{
+
+    background:rgba(255,255,255,.22);
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:13px;
+
+}
+
+/*==========================================================
+LANE COLORS
+==========================================================*/
+
+.rfq{
+
+    background:#2563eb;
+
+}
+
+.info{
+
+    background:#f59e0b;
+
+}
+
+.wip{
+
+    background:#0ea5e9;
+
+}
+
+.qc{
+
+    background:#8b5cf6;
+
+}
+
+.resolution{
+
+    background:#ef4444;
+
+}
+
+.completed{
+
+    background:#16a34a;
+
+}
+
+/*==========================================================
+LANE BODY
+==========================================================*/
+
+.lane-body{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:16px;
+
+}
+
+/*==========================================================
+SCROLLBAR
+==========================================================*/
+
+.lane-body::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.lane-body::-webkit-scrollbar-thumb{
+
+    background:#cfd8e8;
+
+    border-radius:20px;
+
+}
+
+.lane-body::-webkit-scrollbar-track{
+
+    background:transparent;
 
 }
