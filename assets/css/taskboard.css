@@ -767,3 +767,69 @@ TASK CARD
     font-size:12px;
 
 }
+
+/*==========================================================
+TASK CARD V2
+==========================================================*/
+
+.task-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    margin:12px 0 6px;
+
+    color:#1e293b;
+
+}
+
+.task-module{
+
+    margin:8px 0 15px;
+
+    font-size:13px;
+
+    color:#64748b;
+
+}
+
+.footer-left{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    width:100%;
+
+    font-size:13px;
+
+    color:#64748b;
+
+}
+
+.task-bottom{
+
+    margin-top:16px;
+
+    border-top:1px solid #edf2f7;
+
+    padding-top:12px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:12px;
+
+    color:#475569;
+
+}
+
+.task-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.15);
+
+}
