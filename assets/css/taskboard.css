@@ -879,3 +879,34 @@ SEARCH BOX
     background:transparent;
 
 }
+/*==========================================================
+DRAG & DROP
+==========================================================*/
+
+.task-card.dragging{
+
+    opacity:.45;
+
+    transform:rotate(2deg);
+
+    cursor:grabbing;
+
+}
+
+.lane-body{
+
+    transition:.25s;
+
+    min-height:180px;
+
+}
+
+.lane-body.drag-over{
+
+    background:#dbeafe;
+
+    border:2px dashed #2563eb;
+
+    border-radius:12px;
+
+}

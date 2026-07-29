@@ -136,6 +136,102 @@ function initializeSearch(){
 
     initializeDragDrop();
 
+    /*==========================================================
+DRAG ENGINE V2
+==========================================================*/
+
+function initializeDragDrop(){
+
+    const cards=document.querySelectorAll(".task-card");
+
+    const lanes=document.querySelectorAll(".lane-body");
+
+    let draggedCard=null;
+
+    cards.forEach(card=>{
+
+        card.addEventListener("dragstart",function(){
+
+            draggedCard=this;
+
+            this.classList.add("dragging");
+
+        });
+
+        card.addEventListener("dragend",function(){
+
+            this.classList.remove("dragging");
+
+            lanes.forEach(l=>l.classList.remove("drag-over"));
+
+        });
+
+    });
+
+    lanes.forEach(lane=>{
+
+        lane.addEventListener("dragover",function(e){
+
+            e.preventDefault();
+
+        });
+
+        lane.addEventListener("dragenter",function(e){
+
+            e.preventDefault();
+
+            this.classList.add("drag-over");
+
+        });
+
+        lane.addEventListener("dragleave",function(){
+
+            this.classList.remove("drag-over");
+
+        });
+
+        lane.addEventListener("drop",function(e){
+
+            e.preventDefault();
+
+            this.classList.remove("drag-over");
+
+            if(draggedCard){
+
+                this.appendChild(draggedCard);
+
+                updateLaneCounts();
+
+            }
+
+        });
+
+    });
+
+}
+
+/*==========================================================
+LANE COUNTER ENGINE
+==========================================================*/
+
+function updateLaneCounts(){
+
+    document.querySelectorAll(".lane").forEach(lane=>{
+
+        const count=lane.querySelectorAll(".task-card").length;
+
+        const badge=lane.querySelector(".count");
+
+        if(badge){
+
+            badge.innerText=count;
+
+        }
+
+    });
+
+}
+
     updateLaneCounts();
 
 }
