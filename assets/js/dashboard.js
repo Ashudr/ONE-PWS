@@ -28,6 +28,22 @@ function initializeDashboardButtons() {
 
     }
 
+    // Banner Create Project
+
+const bannerProject =
+    document.getElementById("createProjectBannerBtn");
+
+if (bannerProject) {
+
+    bannerProject.addEventListener("click", function () {
+
+        window.location.href =
+            "../projectwizard/projectwizard.html";
+
+    });
+
+}
+
     // Create Task
 
     const createTask =
