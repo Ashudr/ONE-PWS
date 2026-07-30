@@ -1,3 +1,44 @@
+/* RESET ONLY FOR PROGRESS BOARD */
+
+.progress-page{
+
+    background:#f1f5f9 !important;
+
+    color:#0f172a;
+
+}
+
+
+.progress-page *{
+
+    box-sizing:border-box;
+
+}
+
+
+.progress-page h1,
+.progress-page h2,
+.progress-page h3,
+.progress-page h4,
+.progress-page p{
+
+    margin-top:0;
+
+}
+
+
+.progress-page .control-room{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#f1f5f9;
+
+    padding:30px;
+
+}
+
 /*==========================================================
 ONEPWS PROJECT CONTROL ROOM
 PROGRESS BOARD STYLE
@@ -633,5 +674,49 @@ grid-template-columns:1fr;
 
 }
 
+
+}
+
+.progress-page .kpi-section{
+
+display:grid !important;
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+
+.progress-page .module-grid{
+
+display:grid !important;
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+
+.progress-page .analytics{
+
+display:grid !important;
+
+grid-template-columns:1fr 1fr;
+
+}
+
+
+.progress-page .project-header{
+
+display:flex !important;
+
+}
+
+
+.progress-page .panel,
+.progress-page .kpi-card,
+.progress-page .chart-panel{
+
+background:white !important;
+
+color:#0f172a;
 
 }
