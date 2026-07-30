@@ -5,11 +5,11 @@ TASK BOARD CONTAINER
 
 .taskboard-container{
 
-    padding:20px 25px;
+     width:100%;
 
-    min-height:100vh;
+    padding:12px 15px;
 
-    background:#f8fafc;
+    box-sizing:border-box;
 
 }
 
@@ -99,7 +99,7 @@ KANBAN BOARD
 
     display:flex;
 
-    gap:12px;
+    gap:8px;
 
     overflow-x:auto;
 
@@ -115,9 +115,9 @@ KANBAN BOARD
 
     border-radius:10px;
 
-    min-width:175px;
+    min-width:150px;
 
-    max-width:175px;
+    max-width:150px;
 
     padding-bottom:10px;
 
@@ -229,13 +229,13 @@ CARD AREA
 
 .card-area{
 
-    padding:8px;
+    padding:6px;
 
     display:flex;
 
     flex-direction:column;
 
-    gap:8px;
+    gap:6px;
 
 }
 
@@ -250,15 +250,15 @@ LEAN KIT STYLE CARD
 
 .task-card{
 
-    width:160px;
+    width:135px;
 
-    height:110px;
+    height:90px;
 
     background:white;
 
     border-radius:8px;
 
-    padding:8px;
+    padding:6px;
 
     box-shadow:0 2px 6px rgba(0,0,0,0.08);
 
@@ -313,9 +313,9 @@ CARD CONTENT
 
 .task-card h4{
 
-    margin:6px 0 2px;
+    margin:5px 0 2px;
 
-    font-size:12px;
+    font-size:11px;
 
     color:#0f172a;
 
@@ -333,7 +333,7 @@ CARD CONTENT
 
     margin:0;
 
-    font-size:10px;
+    font-size:9px;
 
     color:#64748b;
 
@@ -400,7 +400,6 @@ SCROLL BAR
     border-radius:10px;
 
 }
-
 
 
 
