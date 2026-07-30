@@ -86,7 +86,8 @@ function initializeButtons() {
         boardButton.addEventListener("click", function () {
 
             window.location.href =
-                "../projectboard/projectboard.html";
+                "../projectboard/projectprogress
+            .html";
 
         });
 
