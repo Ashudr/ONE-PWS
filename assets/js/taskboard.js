@@ -132,7 +132,6 @@ function initializeSearch(){
 
 }
 
-    initializeModal();
 
     initializeDragDrop();
 
@@ -245,6 +244,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("taskModal");
 
     const closeBtn = document.getElementById("closeModal");
+
+    console.log(modal);
+    console.log(closeBtn);
+
+    console.log(document.getElementById("taskModal"));
+    console.log(document.getElementById("closeModal"));
 
     const cards = document.querySelectorAll(".task-card");
 
