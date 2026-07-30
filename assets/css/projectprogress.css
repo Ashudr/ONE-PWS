@@ -1,286 +1,124 @@
-/* ==========================================================
-   ONEPWS TASK BOARD
-========================================================== */
+<!DOCTYPE html>
+<html lang="en">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<head>
 
-body{
+    <meta charset="UTF-8">
 
-    font-family:Segoe UI,Arial,sans-serif;
-    background:#f4f6f9;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-}
+    <title>ONEPWS | Project Progress</title>
 
-/* ==========================================================
-HEADER
-========================================================== */
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-.top-header{
+    <link rel="stylesheet"
+          href="../../assets/css/style.css">
 
-    height:75px;
+    <link rel="stylesheet"
+          href="../../assets/css/projectprogress.css">
 
-    background:white;
+</head>
 
-    display:flex;
+<body>
 
-    justify-content:space-between;
+<div class="app-layout">
 
-    align-items:center;
+    <!-- Sidebar -->
 
-    padding:0 25px;
+    <aside class="sidebar">
 
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+        <!-- We'll reuse the same sidebar used in Task Board -->
 
-}
+    </aside>
 
-.logo-area{
+    <!-- Main -->
 
-    display:flex;
+    <main class="main-content">
 
-    align-items:center;
+        <!-- Header -->
 
-    gap:15px;
+        <header class="page-header">
 
-}
+            <div>
 
-.logo-area img{
+                <h1>Project Progress Board</h1>
 
-    height:42px;
+                <p>Monitor project completion status.</p>
 
-}
+            </div>
 
-.header-right{
+        </header>
 
-    display:flex;
+        <!-- Toolbar -->
 
-    gap:12px;
+        <section class="toolbar">
 
-}
+            <div class="toolbar-left">
 
-.header-right button{
+                <button class="secondary-btn">
 
-    border:none;
+                    <i class="fa-solid fa-arrow-left"></i>
 
-    background:#202a44;
+                    Dashboard
 
-    color:white;
+                </button>
 
-    padding:10px 18px;
+            </div>
 
-    border-radius:8px;
+            <div class="toolbar-right">
 
-    cursor:pointer;
+                <input
+                    type="text"
+                    placeholder="Search Project...">
 
-}
+            </div>
 
-.header-right button:hover{
+        </section>
 
-    background:#d7193f;
+        <!-- KPI CARDS -->
 
-}
+        <section class="progress-kpi">
 
-/* ==========================================================
-TOOLBAR
-========================================================== */
+            <div class="kpi-card">
+                <h3>24</h3>
+                <span>Total Projects</span>
+            </div>
 
-.toolbar{
+            <div class="kpi-card">
+                <h3>15</h3>
+                <span>On Track</span>
+            </div>
 
-    display:flex;
+            <div class="kpi-card">
+                <h3>5</h3>
+                <span>Delayed</span>
+            </div>
 
-    gap:15px;
+            <div class="kpi-card">
+                <h3>4</h3>
+                <span>Completed</span>
+            </div>
 
-    align-items:center;
+            <div class="kpi-card">
+                <h3>2</h3>
+                <span>Critical</span>
+            </div>
 
-    padding:20px;
+        </section>
 
-    background:white;
+        <!-- PROJECT LIST -->
 
-    border-bottom:1px solid #ddd;
+        <section class="project-progress-container">
 
-}
+        </section>
 
-.toolbar button{
+    </main>
 
-    padding:10px 18px;
+</div>
 
-    border:none;
+<script src="../../assets/js/projectprogress.js"></script>
 
-    border-radius:8px;
+</body>
 
-    background:#202a44;
-
-    color:white;
-
-    cursor:pointer;
-
-}
-
-.toolbar button:hover{
-
-    background:#d7193f;
-
-}
-
-.toolbar input{
-
-    padding:10px;
-
-    width:260px;
-
-    border:1px solid #ccc;
-
-    border-radius:8px;
-
-}
-
-/* ==========================================================
-KANBAN BOARD
-========================================================== */
-
-.board-container{
-
-    display:flex;
-
-    gap:20px;
-
-    overflow-x:auto;
-
-    padding:25px;
-
-    min-height:calc(100vh - 150px);
-
-}
-
-/* ==========================================================
-LANE
-========================================================== */
-
-.lane{
-
-    min-width:320px;
-
-    background:#eef2f6;
-
-    border-radius:12px;
-
-    padding:15px;
-
-    flex-shrink:0;
-
-}
-
-.lane h2{
-
-    text-align:center;
-
-    margin-bottom:15px;
-
-    color:#202a44;
-
-}
-
-/* ==========================================================
-TASK CARD
-========================================================== */
-
-.task-card{
-
-    background:white;
-
-    border-radius:10px;
-
-    padding:15px;
-
-    margin-bottom:15px;
-
-    cursor:pointer;
-
-    box-shadow:0 4px 10px rgba(0,0,0,.08);
-
-    transition:.25s;
-
-}
-
-.task-card:hover{
-
-    transform:translateY(-4px);
-
-}
-
-.task-card h3{
-
-    color:#d7193f;
-
-    margin-bottom:10px;
-
-}
-
-.task-card p{
-
-    margin-bottom:10px;
-
-}
-
-.task-card small{
-
-    color:#666;
-
-}
-
-/* ==========================================================
-POPUP
-========================================================== */
-
-.modal{
-
-    display:none;
-
-    position:fixed;
-
-    left:0;
-
-    top:0;
-
-    width:100%;
-
-    height:100%;
-
-    background:rgba(0,0,0,.55);
-
-}
-
-.modal-content{
-
-    width:700px;
-
-    max-width:90%;
-
-    background:white;
-
-    margin:60px auto;
-
-    padding:30px;
-
-    border-radius:12px;
-
-    position:relative;
-
-}
-
-#closeModal{
-
-    position:absolute;
-
-    right:20px;
-
-    top:15px;
-
-    font-size:30px;
-
-    cursor:pointer;
-
-}
+</html>
