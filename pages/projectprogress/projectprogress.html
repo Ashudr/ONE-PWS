@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Project Progress Board | ONEPWS</title>
+<title>ONEPWS | Project Control Room</title>
 
 
 <link rel="stylesheet" href="../../assets/css/style.css">
@@ -21,280 +21,576 @@
 <body>
 
 
-<div class="progress-container">
+<div class="control-room">
+
 
 
 <!-- HEADER -->
 
-<div class="page-header">
+<section class="project-header">
 
-<h1>Project Progress Board</h1>
+
+<div>
+
+<h1>
+ONEPWS PROJECT CONTROL ROOM
+</h1>
+
 
 <p>
 Project : Corporate Headquarters Development
 </p>
 
+
+<p>
+Customer : ABC Pvt Ltd
+</p>
+
+
 </div>
+
+
+
+<div class="project-status">
+
+<h3>
+PROJECT STATUS
+</h3>
+
+
+<span class="status-green">
+● ON TRACK
+</span>
+
+
+<p>
+Target Completion : 31 Dec 2026
+</p>
+
+
+<p>
+Days Remaining : 154 Days
+</p>
+
+
+</div>
+
+
+</section>
+
+
 
 
 
 <!-- KPI SECTION -->
 
-<div class="progress-kpi">
+
+<section class="kpi-section">
 
 
 <div class="kpi-card">
 
-<h3>Overall Completion</h3>
 
-<div class="circle">
+<h4>
+OVERALL PROGRESS
+</h4>
 
-<span id="overallProgress">
+
+<div class="progress-circle">
+
+<span>
 72%
 </span>
 
-</div>
 
 </div>
+
+
+<p>
+▲ +5% This Week
+</p>
+
+
+</div>
+
+
 
 
 
 <div class="kpi-card">
 
-<h3>Material Status</h3>
 
-<h2 class="green">
-85%
+<h4>
+SCHEDULE HEALTH
+</h4>
+
+
+<h2 class="green-text">
+ON TRACK
 </h2>
 
-<p>Material On Site</p>
+
+<p>
+Ahead by 3 Days
+</p>
+
 
 </div>
+
+
 
 
 
 <div class="kpi-card">
 
-<h3>Installation</h3>
 
-<h2 class="orange">
-60%
-</h2>
-
-<p>Work In Progress</p>
-
-</div>
-
-
-
-<div class="kpi-card">
-
-<h3>Warnings</h3>
-
-<h2 class="red">
-3
-</h2>
-
-<p>Critical Issues</p>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<!-- MAIN PROGRESS AREA -->
-
-
-<div class="progress-grid">
-
-
-
-<!-- CHART -->
-
-
-<div class="chart-box">
-
-<h2>Project Progress</h2>
-
-
-<canvas id="progressChart"></canvas>
-
-
-</div>
-
-
-
-
-
-<!-- DETAILS -->
-
-
-<div class="status-box">
-
-
-<h2>Progress Details</h2>
-
-
-<div class="progress-row">
-
-<label>
-Reservation
-</label>
-
-<div class="bar">
-
-<span style="width:90%">
-</span>
-
-</div>
-
-<b>
-90%
-</b>
-
-</div>
-
-
-
-<div class="progress-row">
-
-<label>
-Manufacturing
-</label>
-
-<div class="bar">
-
-<span style="width:75%">
-</span>
-
-</div>
-
-<b>
-75%
-</b>
-
-</div>
-
-
-
-
-
-<div class="progress-row">
-
-<label>
-Site Approval
-</label>
-
-<div class="bar">
-
-<span style="width:65%">
-</span>
-
-</div>
-
-<b>
-65%
-</b>
-
-</div>
-
-
-
-
-<div class="progress-row">
-
-<label>
-Dispatch
-</label>
-
-<div class="bar">
-
-<span style="width:55%">
-</span>
-
-</div>
-
-<b>
-55%
-</b>
-
-</div>
-
-
-
-
-<div class="progress-row">
-
-<label>
-Installation
-</label>
-
-<div class="bar">
-
-<span style="width:60%">
-</span>
-
-</div>
-
-<b>
-60%
-</b>
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-<!-- WARNINGS -->
-
-
-<div class="warning-box">
+<h4>
+MATERIAL READINESS
+</h4>
 
 
 <h2>
-Critical Warnings
+85%
+</h2>
+
+
+<p>
+Material Available
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="kpi-card">
+
+
+<h4>
+CRITICAL WARNINGS
+</h4>
+
+
+<h2 class="red-text">
+3
+</h2>
+
+
+<p>
+Need Attention
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- EXECUTION PIPELINE -->
+
+
+<section class="panel">
+
+
+<h2>
+Project Execution Pipeline
 </h2>
 
 
 
-<div class="warning">
-
-⚠ Delay in Electrical Approval
-
-</div>
+<div class="timeline">
 
 
-<div class="warning">
+<div class="stage complete">
 
-⚠ Material shortage in Flooring Module
+<span>
+✓
+</span>
 
-</div>
-
-
-<div class="warning">
-
-⚠ Client Approval Pending
+Reservation
 
 </div>
 
 
 
+
+<div class="stage complete">
+
+<span>
+✓
+</span>
+
+Design Approval
+
 </div>
+
+
+
+
+<div class="stage active">
+
+<span>
+75%
+</span>
+
+Manufacturing
+
+</div>
+
+
+
+
+<div class="stage warning">
+
+<span>
+!
+</span>
+
+Quality Check
+
+</div>
+
+
+
+
+<div class="stage warning">
+
+<span>
+55%
+</span>
+
+Dispatch
+
+</div>
+
+
+
+
+<div class="stage active">
+
+<span>
+85%
+</span>
+
+Material On Site
+
+</div>
+
+
+
+
+<div class="stage warning">
+
+<span>
+60%
+</span>
+
+Installation
+
+</div>
+
+
+
+
+<div class="stage pending">
+
+<span>
+○
+</span>
+
+Handover
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- MODULE CONTROL -->
+
+
+<section class="panel">
+
+
+<h2>
+Module Progress Command Center
+</h2>
+
+
+
+<div class="module-grid">
+
+
+
+<div class="module-card">
+
+<h3>
+Ceiling Module
+</h3>
+
+<div class="module-progress">
+90%
+</div>
+
+<span class="healthy">
+GREEN
+</span>
+
+</div>
+
+
+
+
+<div class="module-card">
+
+<h3>
+Paneling Module
+</h3>
+
+<div class="module-progress">
+75%
+</div>
+
+<span class="healthy">
+GREEN
+</span>
+
+</div>
+
+
+
+
+<div class="module-card">
+
+<h3>
+Partition Module
+</h3>
+
+<div class="module-progress">
+65%
+</div>
+
+<span class="watch">
+WATCH
+</span>
+
+</div>
+
+
+
+
+<div class="module-card">
+
+<h3>
+Flooring Module
+</h3>
+
+<div class="module-progress">
+55%
+</div>
+
+<span class="danger">
+DELAY
+</span>
+
+</div>
+
+
+
+
+<div class="module-card">
+
+<h3>
+Door Module
+</h3>
+
+<div class="module-progress">
+70%
+</div>
+
+<span class="healthy">
+GREEN
+</span>
+
+</div>
+
+
+
+
+<div class="module-card">
+
+<h3>
+Window Module
+</h3>
+
+<div class="module-progress">
+80%
+</div>
+
+<span class="healthy">
+GREEN
+</span>
+
+</div>
+
+
+
+
+<div class="module-card">
+
+<h3>
+Electrical Module
+</h3>
+
+<div class="module-progress">
+60%
+</div>
+
+<span class="watch">
+WATCH
+</span>
+
+</div>
+
+
+
+
+<div class="module-card">
+
+<h3>
+Furniture Module
+</h3>
+
+<div class="module-progress">
+45%
+</div>
+
+<span class="danger">
+DELAY
+</span>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ANALYTICS -->
+
+
+<section class="analytics">
+
+
+<div class="chart-panel">
+
+
+<h2>
+Overall Completion
+</h2>
+
+
+<canvas id="completionChart"></canvas>
+
+
+</div>
+
+
+
+
+<div class="chart-panel">
+
+
+<h2>
+Module Contribution
+</h2>
+
+
+<canvas id="moduleChart"></canvas>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ALERTS -->
+
+
+<section class="panel alert-panel">
+
+
+<h2>
+Critical Alerts
+</h2>
+
+
+
+<div class="alert red-alert">
+
+🔴 Flooring Material Delay
+<br>
+Impact : Installation +7 Days
+
+</div>
+
+
+
+<div class="alert orange-alert">
+
+🟠 Electrical Approval Pending
+<br>
+Impact : Testing Delay
+
+</div>
+
+
+
+<div class="alert yellow-alert">
+
+🟡 Client Approval Waiting
+<br>
+Owner : Design Team
+
+</div>
+
+
+
+</section>
+
+
 
 
 
