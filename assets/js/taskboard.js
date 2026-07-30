@@ -235,3 +235,87 @@ function updateLaneCounts(){
     updateLaneCounts();
 
 }
+
+/*==========================================================
+TASK DETAILS MODAL
+==========================================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const modal = document.getElementById("taskModal");
+
+    const closeBtn = document.getElementById("closeModal");
+
+    const cards = document.querySelectorAll(".task-card");
+
+    const tabs = document.querySelectorAll(".tab-btn");
+
+    const contents = document.querySelectorAll(".tab-content");
+
+    /*----------------------------------------
+    OPEN MODAL
+    ----------------------------------------*/
+
+    cards.forEach(function(card){
+
+        card.addEventListener("click", function(){
+
+            modal.style.display = "flex";
+
+        });
+
+    });
+
+    /*----------------------------------------
+    CLOSE BUTTON
+    ----------------------------------------*/
+
+    closeBtn.addEventListener("click", function(){
+
+        modal.style.display = "none";
+
+    });
+
+    /*----------------------------------------
+    CLICK OUTSIDE
+    ----------------------------------------*/
+
+    window.addEventListener("click", function(e){
+
+        if(e.target===modal){
+
+            modal.style.display="none";
+
+        }
+
+    });
+
+    /*----------------------------------------
+    TAB SWITCHING
+    ----------------------------------------*/
+
+    tabs.forEach(function(tab){
+
+        tab.addEventListener("click", function(){
+
+            tabs.forEach(function(btn){
+
+                btn.classList.remove("active");
+
+            });
+
+            contents.forEach(function(page){
+
+                page.classList.remove("active");
+
+            });
+
+            this.classList.add("active");
+
+            document.getElementById(this.dataset.tab).classList.add("active");
+
+        });
+
+    });
+
+});
