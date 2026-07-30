@@ -226,115 +226,34 @@
 
 </section>
 
-        <!-- KPI Placeholder -->
+        <!-- ==========================================================
+KPI SECTION
+========================================================== -->
 
-        <section class="kpi-container">
+<section class="kpi-container">
 
-    <div class="task-card">
+    <div class="kpi-card">
 
-    <div class="task-top">
-
-        <span class="task-id">
-
-            PAR-001
-
-        </span>
-
-        <span class="priority high">
-
-            HIGH
-
-        </span>
-
-    </div>
-
-    <h3 class="task-title">
-
-        Partition Layout Drawing
-
-    </h3>
-
-    <p class="project-name">
-
-        Corporate HQ Interior
-
-    </p>
-
-    <div class="task-module">
-
-        📐 Module : Partition
-
-    </div>
-
-    <div class="progress-wrapper">
-
-        <div class="progress-bar">
-
-            <div class="progress-fill"
-                 style="width:72%;"></div>
-
+        <div class="kpi-icon kpi-blue">
+            <i class="fa-solid fa-list-check"></i>
         </div>
 
-        <span>72%</span>
-
-    </div>
-
-    <div class="task-footer">
-
-        <div class="footer-left">
-
-            <span>👤 Ashu</span>
-
-            <span>📅 28 Jul</span>
-
+        <div class="kpi-info">
+            <span>Total Tasks</span>
+            <h2 id="totalTasks">120</h2>
         </div>
 
     </div>
-
-    <div class="task-bottom">
-
-        <span>💬 5</span>
-
-        <span>📎 2</span>
-
-        <span>⏱ 3 Days Left</span>
-
-    </div>
-
-</div>
 
     <div class="kpi-card">
 
         <div class="kpi-icon kpi-green">
-
-            <i class="fa-solid fa-circle-play"></i>
-
+            <i class="fa-solid fa-play"></i>
         </div>
 
         <div class="kpi-info">
-
             <span>Running</span>
-
-            <h2>38</h2>
-
-        </div>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <div class="kpi-icon kpi-purple">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-        </div>
-
-        <div class="kpi-info">
-
-            <span>Completed</span>
-
-            <h2>72</h2>
-
+            <h2 id="runningTasks">38</h2>
         </div>
 
     </div>
@@ -342,17 +261,12 @@
     <div class="kpi-card">
 
         <div class="kpi-icon kpi-orange">
-
             <i class="fa-solid fa-triangle-exclamation"></i>
-
         </div>
 
         <div class="kpi-info">
-
-            <span>Critical</span>
-
-            <h2>12</h2>
-
+            <span>Waiting Info</span>
+            <h2 id="waitingTasks">14</h2>
         </div>
 
     </div>
@@ -360,17 +274,25 @@
     <div class="kpi-card">
 
         <div class="kpi-icon kpi-red">
-
-            <i class="fa-solid fa-clock"></i>
-
+            <i class="fa-solid fa-circle-exclamation"></i>
         </div>
 
         <div class="kpi-info">
+            <span>Critical</span>
+            <h2 id="criticalTasks">8</h2>
+        </div>
 
-            <span>Overdue</span>
+    </div>
 
-            <h2>8</h2>
+    <div class="kpi-card">
 
+        <div class="kpi-icon kpi-purple">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="kpi-info">
+            <span>Completed</span>
+            <h2 id="completedTasks">56</h2>
         </div>
 
     </div>
