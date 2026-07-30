@@ -99,11 +99,11 @@ KANBAN BOARD
 
     display:flex;
 
-    gap:8px;
+    gap:12px;
 
-    overflow-x:auto;
+    width:100%;
 
-    padding-bottom:15px;
+    align-items:flex-start;
 
 }
 
@@ -111,15 +111,16 @@ KANBAN BOARD
 
 .kanban-column{
 
-    background:#eef2f7;
+    flex:1;
+    min-width:220px;
+    max-width:220px;
 
-    border-radius:10px;
+    display:flex;
+    flex-direction:column;
 
-    min-width:150px;
+    background:#f3f6fb;
 
-    max-width:150px;
-
-    padding-bottom:10px;
+    border-radius:12px;
 
 }
 
@@ -414,7 +415,15 @@ RESPONSIVE
 
 .taskboard-container{
 
-padding:15px;
+width:100%;
+
+    max-width:none;
+
+    margin:0;
+
+    padding:12px;
+
+    box-sizing:border-box;
 
 }
 
