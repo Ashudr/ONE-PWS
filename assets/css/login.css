@@ -372,25 +372,9 @@ body{
 
 button{
 
-    width:100%;
-
-    border:none;
-
     cursor:pointer;
 
-    border-radius:12px;
-
-    padding:16px;
-
-    font-size:16px;
-
-    font-weight:600;
-
-    color:white;
-
-    background:linear-gradient(90deg,#ff2b2b,#c70000);
-
-    transition:.30s;
+    font-family:inherit;
 
 }
 
