@@ -3,730 +3,401 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<title>ONEPWS - Task Board</title>
 
-    <title>ONEPWS | Task Board</title>
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<!-- COMMON CSS -->
+<link rel="stylesheet" href="../../assets/css/style.css">
 
-    <link rel="stylesheet"
-          href="../../assets/css/style.css">
+<!-- TASK BOARD CSS -->
+<link rel="stylesheet" href="../../assets/css/taskboard.css">
 
-    <link rel="stylesheet"
-          href="../../assets/css/taskboard.css">
+
+<!-- ICONS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 </head>
 
+
 <body>
 
-<div class="app-layout">
 
-    <!-- Sidebar Placeholder -->
+<div class="taskboard-container">
 
-    <aside class="sidebar">
 
-    <div class="sidebar-header">
+<!-- HEADER -->
 
-        <img src="../../assets/images/onepws-logo.png"
-             alt="ONEPWS">
-
-        <h2>ONEPWS</h2>
-
-    </div>
-
-    <nav class="sidebar-menu">
-
-        <a href="../dashboard/dashboard.html"
-           class="menu-item">
-
-            <i class="fa-solid fa-table-columns"></i>
-
-            <span>Dashboard</span>
-
-        </a>
-
-        <a href="../projectboard/projectboard.html"
-           class="menu-item">
-
-            <i class="fa-solid fa-diagram-project"></i>
-
-            <span>Project Board</span>
-
-        </a>
-
-        <a href="../taskboard/taskboard.html"
-           class="menu-item active">
-
-            <i class="fa-solid fa-list-check"></i>
-
-            <span>Task Board</span>
-
-        </a>
-
-        <a href="../projectprogress/projectprogress.html"
-           class="menu-item">
-
-            <i class="fa-solid fa-chart-line"></i>
-
-            <span>Project Progress</span>
-
-        </a>
-
-        <a href="#"
-           id="reportsBtn"
-           class="menu-item">
-
-            <i class="fa-solid fa-chart-pie"></i>
-
-            <span>Reports</span>
-
-        </a>
-
-        <a href="#"
-           class="menu-item">
-
-            <i class="fa-solid fa-users"></i>
-
-            <span>Users</span>
-
-        </a>
-
-        <a href="#"
-           class="menu-item">
-
-            <i class="fa-solid fa-gear"></i>
-
-            <span>Settings</span>
-
-        </a>
-
-    </nav>
-
-    <div class="sidebar-footer">
-
-        <a href="../auth/login.html"
-           class="logout-btn">
-
-            <i class="fa-solid fa-right-from-bracket"></i>
-
-            Logout
-
-        </a>
-
-    </div>
-
-</aside>
-
-    <!-- Main Content -->
-
-    <main class="main-content">
-
-        <!-- Header Placeholder -->
-
-        <header class="page-header">
+<div class="taskboard-header">
 
     <div>
-
-        <h1>Task Board</h1>
+        <h2>
+            <i class="fa-solid fa-layer-group"></i>
+            Task Board
+        </h2>
 
         <p>
-            Manage and monitor all project tasks.
+            Project Management Workflow
         </p>
 
     </div>
 
-    <div class="header-actions">
 
-        <button id="notificationBtn">
+    <button class="add-task-btn">
 
-            <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-plus"></i>
+        Add Task
 
-        </button>
+    </button>
 
-        <button id="profileBtn">
-
-            <i class="fa-solid fa-user"></i>
-
-            Ashu
-
-        </button>
-
-    </div>
-
-</header>
-
-        <!-- Toolbar Placeholder -->
-
-        <section class="toolbar">
-
-    <div class="toolbar-left">
-
-        <button id="backBtn" class="secondary-btn">
-
-            <i class="fa-solid fa-arrow-left"></i>
-
-            Project Dashboard
-
-        </button>
-
-        <button id="newTaskBtn" class="primary-btn">
-
-            <i class="fa-solid fa-plus"></i>
-
-            New Task
-
-        </button>
-
-        <button id="childTaskBtn" class="secondary-btn">
-
-            <i class="fa-solid fa-diagram-project"></i>
-
-            Child Task
-
-        </button>
-
-    </div>
-
-    <div class="toolbar-right">
-
-        <div class="search-box">
-
-    <i class="fa-solid fa-magnifying-glass"></i>
-
-    <input
-        type="text"
-        id="searchTask"
-        placeholder="Search Task...">
 
 </div>
 
-        <button id="filterBtn" class="secondary-btn">
 
-            <i class="fa-solid fa-filter"></i>
 
-        </button>
+<!-- BOARD -->
 
-        <button id="refreshBtn" class="secondary-btn">
+<div class="kanban-board">
 
-            <i class="fa-solid fa-rotate-right"></i>
-
-        </button>
-
-        <button id="exportBtn" class="secondary-btn">
-
-            <i class="fa-solid fa-file-export"></i>
-
-        </button>
-
-    </div>
-
-</section>
-
-<!-- ==========================================================
-KPI SECTION
-========================================================== -->
-
-<section class="kpi-container">
-
-    <div class="kpi-card">
-
-        <div class="kpi-icon kpi-blue">
-            <i class="fa-solid fa-list-check"></i>
-        </div>
-
-        <div class="kpi-info">
-            <span>Total Tasks</span>
-            <h2 id="totalTasks">120</h2>
-        </div>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <div class="kpi-icon kpi-green">
-            <i class="fa-solid fa-play"></i>
-        </div>
-
-        <div class="kpi-info">
-            <span>Running</span>
-            <h2 id="runningTasks">38</h2>
-        </div>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <div class="kpi-icon kpi-orange">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-        </div>
-
-        <div class="kpi-info">
-            <span>Waiting Info</span>
-            <h2 id="waitingTasks">14</h2>
-        </div>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <div class="kpi-icon kpi-red">
-            <i class="fa-solid fa-circle-exclamation"></i>
-        </div>
-
-        <div class="kpi-info">
-            <span>Critical</span>
-            <h2 id="criticalTasks">8</h2>
-        </div>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <div class="kpi-icon kpi-purple">
-            <i class="fa-solid fa-circle-check"></i>
-        </div>
-
-        <div class="kpi-info">
-            <span>Completed</span>
-            <h2 id="completedTasks">56</h2>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================================================
-KANBAN BOARD
-========================================================== -->
-
-<section class="kanban-container">
 
 
 <!-- RFQ -->
 
-<div class="lane">
+<div class="kanban-column">
 
-    <div class="lane-header rfq">
-        <span>RFQ</span>
-        <span class="count">12</span>
-    </div>
+<div class="column-header rfq">
 
-    <div class="lane-body" data-lane="RFQ">
+RFQ
 
-        <div class="task-card" draggable="true">
-
-            <div class="task-top">
-
-                <span class="task-id">
-                    PAR-001
-                </span>
-
-                <span class="priority high">
-                    HIGH
-                </span>
-
-            </div>
-
-
-            <h3>
-                Partition Layout Drawing
-            </h3>
-
-
-            <p class="project-name">
-                Corporate HQ Interior
-            </p>
-
-
-            <div class="task-meta">
-
-                <span>
-                    👤 Ashu
-                </span>
-
-                <span>
-                    📅 28 Jul
-                </span>
-
-            </div>
-
-
-            <div class="task-progress">
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-                         style="width:72%">
-                    </div>
-
-                </div>
-
-                <span>
-                    72%
-                </span>
-
-            </div>
-
-
-        </div>
-
-    </div>
+<span>3</span>
 
 </div>
+
+
+
+<div class="card-area">
+
+
+<div class="task-card">
+
+<div class="time-left">
+<i class="fa-regular fa-clock"></i>
+2D 06H
+</div>
+
+
+<h4>
+Project Alpha
+</h4>
+
+
+<p>
+ABC Industries
+</p>
+
+
+<div class="card-footer">
+
+<span>
+<i class="fa-solid fa-user"></i>
+Ashu
+</span>
+
+
+<span>
+<i class="fa-solid fa-flag"></i>
+High
+</span>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
 
 
 
 <!-- INFO MISSING -->
 
-<div class="lane">
 
-    <div class="lane-header info">
-
-        <span>
-            INFO MISSING
-        </span>
-
-        <span class="count">
-            4
-        </span>
-
-    </div>
+<div class="kanban-column">
 
 
-    <div class="lane-body"
-         data-lane="INFO MISSING">
+<div class="column-header info">
 
-    </div>
+INFO MISSING
+
+<span>2</span>
+
+</div>
+
+
+<div class="card-area">
+
+
+<div class="task-card">
+
+<div class="time-left warning">
+
+<i class="fa-regular fa-clock"></i>
+
+5H LEFT
+
+</div>
+
+
+<h4>
+Drawing Review
+</h4>
+
+
+<p>
+Customer Data
+</p>
+
+
+<div class="card-footer">
+
+<span>
+<i class="fa-solid fa-user"></i>
+RK
+</span>
+
+
+<span>
+<i class="fa-solid fa-circle-exclamation"></i>
+</span>
 
 
 </div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
 
 
 
 <!-- WIP -->
 
-<div class="lane">
 
-    <div class="lane-header wip">
-
-        <span>
-            WIP
-        </span>
-
-        <span class="count">
-            18
-        </span>
-
-    </div>
+<div class="kanban-column">
 
 
-    <div class="lane-body"
-         data-lane="WIP">
+<div class="column-header wip">
 
-    </div>
+WIP
+
+<span>5</span>
+
+</div>
+
+
+
+<div class="card-area">
+
+
+<div class="task-card">
+
+
+<div class="time-left">
+
+<i class="fa-regular fa-clock"></i>
+
+10D
+
+</div>
+
+
+<h4>
+Panel Design
+</h4>
+
+
+<p>
+XYZ Client
+</p>
+
+
+<div class="card-footer">
+
+<span>
+<i class="fa-solid fa-user"></i>
+SK
+</span>
+
+
+<span>
+Medium
+</span>
+
+</div>
 
 
 </div>
+
+
+</div>
+
+
+
+</div>
+
+
 
 
 
 
 <!-- QC -->
 
-<div class="lane">
 
-    <div class="lane-header qc">
-
-        <span>
-            QC
-        </span>
-
-        <span class="count">
-            7
-        </span>
-
-    </div>
+<div class="kanban-column">
 
 
-    <div class="lane-body"
-         data-lane="QC">
+<div class="column-header qc">
 
-    </div>
+QC
+
+<span>4</span>
+
+</div>
+
+
+<div class="card-area">
 
 
 </div>
+
+
+</div>
+
+
+
 
 
 
 
 <!-- RESOLVED -->
 
-<div class="lane">
 
-    <div class="lane-header resolved">
-
-        <span>
-            RESOLVED
-        </span>
-
-        <span class="count">
-            3
-        </span>
-
-    </div>
+<div class="kanban-column">
 
 
-    <div class="lane-body"
-         data-lane="RESOLVED">
+<div class="column-header resolved">
 
-    </div>
+RESOLVED
+
+<span>6</span>
+
+</div>
+
+
+<div class="card-area">
 
 
 </div>
+
+
+</div>
+
+
+
+
 
 
 
 
 <!-- COMPLETED -->
 
-<div class="lane">
 
-    <div class="lane-header completed">
-
-        <span>
-            COMPLETED
-        </span>
-
-        <span class="count">
-            56
-        </span>
-
-    </div>
+<div class="kanban-column">
 
 
-    <div class="lane-body"
-         data-lane="COMPLETED">
+<div class="column-header completed">
 
-    </div>
+COMPLETED
+
+<span>10</span>
+
+</div>
+
+
+<div class="card-area">
+
+
+<div class="task-card completed-card">
+
+
+<div class="time-left">
+
+<i class="fa-solid fa-check"></i>
+
+DONE
+
+</div>
+
+
+<h4>
+Door Module
+</h4>
+
+
+<p>
+Completed
+</p>
+
+
+
+<div class="card-footer">
+
+<span>
+<i class="fa-solid fa-user"></i>
+AM
+</span>
 
 
 </div>
 
 
-</section>
+</div>
 
-</main>
 
 </div>
 
-<!-- ==========================================================
-TASK DETAILS MODAL
-========================================================== -->
-
-<div id="taskModal" class="modal">
-
-    <div class="modal-window">
-
-        <!-- HEADER -->
-
-        <div class="modal-header">
-
-            <div>
-
-                <h2>Task Details</h2>
-
-                <span>ONEPWS Enterprise Task Manager</span>
-
-            </div>
-
-            <button id="closeModal">
-
-                <i class="fa-solid fa-xmark"></i>
-
-            </button>
-
-        </div>
-
-        <!-- TABS -->
-
-        <div class="modal-tabs">
-
-            <button class="tab-btn active"
-                    data-tab="general">
-
-                General
-
-            </button>
-
-            <button class="tab-btn"
-                    data-tab="description">
-
-                Description
-
-            </button>
-
-            <button class="tab-btn"
-                    data-tab="attachments">
-
-                Attachments
-
-            </button>
-
-            <button class="tab-btn"
-                    data-tab="comments">
-
-                Comments
-
-            </button>
-
-        </div>
-
-        <!-- BODY -->
-
-        <div class="modal-body">
-
-            <!-- GENERAL -->
-
-            <div class="tab-content active"
-                 id="general">
-
-                <table class="task-info">
-
-                    <tr>
-
-                        <td>Task No.</td>
-
-                        <td>PAR-001</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Project</td>
-
-                        <td>Corporate HQ Interior</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Assigned To</td>
-
-                        <td>Ashu</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Priority</td>
-
-                        <td>High</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Status</td>
-
-                        <td>RFQ</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Progress</td>
-
-                        <td>72%</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Due Date</td>
-
-                        <td>28-Jul-2026</td>
-
-                    </tr>
-
-                </table>
-
-            </div>
-
-            <!-- DESCRIPTION -->
-
-            <div class="tab-content"
-                 id="description">
-
-                <textarea>
-
-Partition Layout Drawing for Corporate HQ Interior Project.
-
-                </textarea>
-
-            </div>
-
-            <!-- ATTACHMENTS -->
-
-            <div class="tab-content"
-                 id="attachments">
-
-                <ul class="attachment-list">
-
-                    <li>📄 Partition Layout.pdf</li>
-
-                    <li>📐 Layout.dwg</li>
-
-                    <li>📊 BOQ.xlsx</li>
-
-                    <li>📝 MOM.docx</li>
-
-                </ul>
-
-            </div>
-
-            <!-- COMMENTS -->
-
-            <div class="tab-content"
-                 id="comments">
-
-                <div class="comment">
-
-                    <strong>Ashu</strong>
-
-                    <p>
-
-                        Initial drawing uploaded.
-
-                    </p>
-
-                </div>
-
-                <div class="comment">
-
-                    <strong>Design Team</strong>
-
-                    <p>
-
-                        Waiting for client approval.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
 
 </div>
 
-<script src="../../assets/js/database.js"></script>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
 <script src="../../assets/js/taskboard.js"></script>
 
+
 </body>
+
 </html>
