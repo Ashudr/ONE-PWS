@@ -484,13 +484,205 @@ KANBAN BOARD
 
 </div>
 
-<!-- PASTE THE TASK DETAILS MODAL HERE -->
+<!-- ==========================================================
+TASK DETAILS MODAL
+========================================================== -->
 
 <div id="taskModal" class="modal">
 
-    ...
-    (entire modal code)
-    ...
+    <div class="modal-window">
+
+        <!-- HEADER -->
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>Task Details</h2>
+
+                <span>ONEPWS Enterprise Task Manager</span>
+
+            </div>
+
+            <button id="closeModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <!-- TABS -->
+
+        <div class="modal-tabs">
+
+            <button class="tab-btn active"
+                    data-tab="general">
+
+                General
+
+            </button>
+
+            <button class="tab-btn"
+                    data-tab="description">
+
+                Description
+
+            </button>
+
+            <button class="tab-btn"
+                    data-tab="attachments">
+
+                Attachments
+
+            </button>
+
+            <button class="tab-btn"
+                    data-tab="comments">
+
+                Comments
+
+            </button>
+
+        </div>
+
+        <!-- BODY -->
+
+        <div class="modal-body">
+
+            <!-- GENERAL -->
+
+            <div class="tab-content active"
+                 id="general">
+
+                <table class="task-info">
+
+                    <tr>
+
+                        <td>Task No.</td>
+
+                        <td>PAR-001</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Project</td>
+
+                        <td>Corporate HQ Interior</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Assigned To</td>
+
+                        <td>Ashu</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Priority</td>
+
+                        <td>High</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Status</td>
+
+                        <td>RFQ</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Progress</td>
+
+                        <td>72%</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Due Date</td>
+
+                        <td>28-Jul-2026</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <!-- DESCRIPTION -->
+
+            <div class="tab-content"
+                 id="description">
+
+                <textarea>
+
+Partition Layout Drawing for Corporate HQ Interior Project.
+
+                </textarea>
+
+            </div>
+
+            <!-- ATTACHMENTS -->
+
+            <div class="tab-content"
+                 id="attachments">
+
+                <ul class="attachment-list">
+
+                    <li>📄 Partition Layout.pdf</li>
+
+                    <li>📐 Layout.dwg</li>
+
+                    <li>📊 BOQ.xlsx</li>
+
+                    <li>📝 MOM.docx</li>
+
+                </ul>
+
+            </div>
+
+            <!-- COMMENTS -->
+
+            <div class="tab-content"
+                 id="comments">
+
+                <div class="comment">
+
+                    <strong>Ashu</strong>
+
+                    <p>
+
+                        Initial drawing uploaded.
+
+                    </p>
+
+                </div>
+
+                <div class="comment">
+
+                    <strong>Design Team</strong>
+
+                    <p>
+
+                        Waiting for client approval.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
