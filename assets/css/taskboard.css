@@ -196,7 +196,13 @@ MAIN CONTENT
 
     margin-left:260px;
 
-    padding:24px;
+    padding:20px;
+
+    width:calc(100% - 260px);
+
+    overflow:hidden;
+
+    box-sizing:border-box;
 
 }
 
@@ -541,17 +547,17 @@ KANBAN BOARD
 
 .kanban-board{
 
-    display:grid;
-
-    grid-template-columns:repeat(6,minmax(280px,1fr));
+    display:flex;
 
     gap:18px;
 
-    align-items:start;
+    align-items:flex-start;
+
+    width:max-content;
+
+    min-width:100%;
 
     overflow-x:auto;
-
-    overflow-y:hidden;
 
     padding-bottom:20px;
 
@@ -563,19 +569,21 @@ COLUMN
 
 .kanban-column{
 
-    display:flex;
+    flex:0 0 300px;
 
-    flex-direction:column;
-
-    min-height:78vh;
+    min-width:300px;
 
     background:#f8fafc;
 
-    border:1px solid var(--border);
+    border:1px solid #e2e8f0;
 
     border-radius:16px;
 
-    overflow:hidden;
+    min-height:78vh;
+
+    display:flex;
+
+    flex-direction:column;
 
 }
 
@@ -1669,9 +1677,17 @@ RESPONSIVE
 
     .main-content{
 
-        margin-left:220px;
+    margin-left:260px;
 
-    }
+    width:calc(100% - 260px);
+
+    padding:20px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+}
 
 }
 
