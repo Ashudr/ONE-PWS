@@ -3,862 +3,308 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ONEPWS | Project Progress</title>
+<title>Project Progress Board | ONEPWS</title>
 
-    <link rel="stylesheet" href="../../assets/css/style.css">
 
-<link rel="stylesheet" href="../../assets/css/projectprogress.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/progressboard.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
-<body>
-
-    <!-- ================= HEADER ================= -->
-
-    <header class="top-header">
-
-        <div class="logo-area">
-
-            <img src="../../assets/images/onepws-logo.png" alt="ONEPWS Logo">
-
-            <div>
-
-                <h2>ONEPWS</h2>
-
-                <p>Enterprise Project Management System</p>
-
-            </div>
-
-        </div>
-
-        <div class="header-actions">
-
-            <button id="backButton">
-                ← Project Board
-            </button>
-
-            <button id="notificationBtn">
-                🔔
-            </button>
-
-            <button id="profileBtn">
-                Ashu ▼
-            </button>
-
-        </div>
-
-    </header>
-
-    <!-- ================= MAIN ================= -->
-
-    <main class="project-progress-container">
-
-        <!-- Breadcrumb -->
-
-        <section class="breadcrumb">
-
-            Home > Project Board > Corporate HQ
-
-        </section>
-
-    <!-- ==========================================================
-KPI SECTION
-========================================================== -->
-
-<section class="progress-kpi">
-
-    <div class="kpi-card">
-
-        <div class="kpi-value">24</div>
-
-        <div class="kpi-title">Total Projects</div>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <div class="kpi-value">18</div>
-
-        <div class="kpi-title">On Track</div>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <div class="kpi-value">03</div>
-
-        <div class="kpi-title">Delayed</div>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <div class="kpi-value">02</div>
-
-        <div class="kpi-title">Critical</div>
-
-    </div>
-
-    <div class="kpi-card">
-
-        <div class="kpi-value">01</div>
-
-        <div class="kpi-title">Completed</div>
-
-    </div>
-
-</section>
-
-<!-- ==========================================================
-PROJECT PROGRESS CARD
-========================================================== -->
-
-<section class="project-list">
-
-    <div class="project-card">
-
-        <!-- HEADER -->
-
-        <div class="project-header">
-
-            <div>
-
-                <h2>Corporate HQ Interior</h2>
-
-                <span class="project-number">
-
-                    Project No : PRJ-240001
-
-                </span>
-
-            </div>
-
-            <div class="project-status">
-
-                <span class="status green">
-
-                    ON TRACK
-
-                </span>
-
-            </div>
-
-        </div>
-
-        <!-- PROJECT INFORMATION -->
-
-        <div class="project-info">
-
-            <div>
-
-                <label>Customer</label>
-
-                <span>ABC Pvt Ltd</span>
-
-            </div>
-
-            <div>
-
-                <label>Project Manager</label>
-
-                <span>Ashu</span>
-
-            </div>
-
-            <div>
-
-                <label>Business Unit</label>
-
-                <span>Corporate Interior</span>
-
-            </div>
-
-            <div>
-
-                <label>Due Date</label>
-
-                <span>28 Jul 2026</span>
-
-            </div>
-
-        </div>
-
-        <!-- OVERALL PROGRESS -->
-
-        <div class="overall-progress">
-
-            <div class="overall-title">
-
-                Overall Project Progress
-
-            </div>
-
-            <div class="progress-row">
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-
-                         style="width:72%;">
-
-                    </div>
-
-                </div>
-
-                <span>72%</span>
-
-            </div>
-
-        </div>
-
-        <!-- MODULES -->
-
-        <div class="module-container">
-
-            <div class="module">
-
-                <span>Ceiling</span>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-
-                         style="width:92%;"></div>
-
-                </div>
-
-                <strong>92%</strong>
-
-            </div>
-
-            <div class="module">
-
-                <span>Partition</span>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-
-                         style="width:76%;"></div>
-
-                </div>
-
-                <strong>76%</strong>
-
-            </div>
-
-            <div class="module">
-
-                <span>Flooring</span>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-
-                         style="width:58%;"></div>
-
-                </div>
-
-                <strong>58%</strong>
-
-            </div>
-
-            <div class="module">
-
-                <span>Doors</span>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-
-                         style="width:42%;"></div>
-
-                </div>
-
-                <strong>42%</strong>
-
-            </div>
-
-            <div class="module">
-
-                <span>Furniture</span>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-
-                         style="width:31%;"></div>
-
-                </div>
-
-                <strong>31%</strong>
-
-            </div>
-
-            <div class="module">
-
-                <span>Electrical</span>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-
-                         style="width:70%;"></div>
-
-                </div>
-
-                <strong>70%</strong>
-
-            </div>
-
-            <div class="module">
-
-                <span>HVAC</span>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-
-                         style="width:64%;"></div>
-
-                </div>
-
-                <strong>64%</strong>
-
-            </div>
-
-            <div class="module">
-
-                <span>Overall Completion</span>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill"
-
-                         style="width:72%;"></div>
-
-                </div>
-
-                <strong>72%</strong>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- ==========================================================
-PROJECT PROGRESS CARDS
-========================================================== -->
-
-<section class="project-progress-container">
-
-    <!-- PROJECT 01 -->
-
-    <div class="project-card">
-
-        <div class="project-header">
-
-            <div>
-
-                <h2>Corporate HQ Interior</h2>
-
-                <span>Project No : PRJ-240001</span>
-
-            </div>
-
-            <div>
-
-                <span class="status green">ON TRACK</span>
-
-            </div>
-
-        </div>
-
-        <table class="project-summary">
-
-            <tr>
-
-                <td><strong>Customer</strong></td>
-
-                <td>ABC Pvt Ltd</td>
-
-                <td><strong>Project Manager</strong></td>
-
-                <td>Ashu</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>Business Unit</strong></td>
-
-                <td>Corporate Interior</td>
-
-                <td><strong>Due Date</strong></td>
-
-                <td>28-Jul-2026</td>
-
-            </tr>
-
-        </table>
-
-        <div class="overall-progress">
-
-            <span>Overall Progress</span>
-
-            <div class="progress-bar">
-
-                <div class="progress-fill" style="width:72%;"></div>
-
-            </div>
-
-            <strong>72%</strong>
-
-        </div>
-
-        <div class="module-grid">
-
-            <div class="module">
-
-                <div class="module-title">
-
-                    <span>Ceiling</span>
-
-                    <span>90%</span>
-
-                </div>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill" style="width:90%;"></div>
-
-                </div>
-
-            </div>
-
-            <div class="module">
-
-                <div class="module-title">
-
-                    <span>Partition</span>
-
-                    <span>75%</span>
-
-                </div>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill" style="width:75%;"></div>
-
-                </div>
-
-            </div>
-
-            <div class="module">
-
-                <div class="module-title">
-
-                    <span>Flooring</span>
-
-                    <span>62%</span>
-
-                </div>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill" style="width:62%;"></div>
-
-                </div>
-
-            </div>
-
-            <div class="module">
-
-                <div class="module-title">
-
-                    <span>Doors</span>
-
-                    <span>45%</span>
-
-                </div>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill" style="width:45%;"></div>
-
-                </div>
-
-            </div>
-
-            <div class="module">
-
-                <div class="module-title">
-
-                    <span>Furniture</span>
-
-                    <span>30%</span>
-
-                </div>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill" style="width:30%;"></div>
-
-                </div>
-
-            </div>
-
-            <div class="module">
-
-                <div class="module-title">
-
-                    <span>Electrical</span>
-
-                    <span>68%</span>
-
-                </div>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill" style="width:68%;"></div>
-
-                </div>
-
-            </div>
-
-            <div class="module">
-
-                <div class="module-title">
-
-                    <span>HVAC</span>
-
-                    <span>55%</span>
-
-                </div>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill" style="width:55%;"></div>
-
-                </div>
-
-            </div>
-
-            <div class="module">
-
-                <div class="module-title">
-
-                    <span>Overall Completion</span>
-
-                    <span>72%</span>
-
-                </div>
-
-                <div class="progress-bar">
-
-                    <div class="progress-fill" style="width:72%;"></div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- Project Header -->
-
-        <section class="project-header">
-
-            <div>
-
-                <h1>Corporate HQ</h1>
-
-                <p>SAP Project ID : SAP240125</p>
-
-            </div>
-
-            <div class="project-status">
-
-                🟢 On Track
-
-            </div>
-
-        </section>
-
-        <!-- Overall Progress -->
-
-        <section class="overall-progress">
-
-            <div class="progress-circle">
-
-                72%
-
-            </div>
-
-            <h2>Overall Project Progress</h2>
-
-        </section>
-
-        <!-- Middle Section -->
-
-        <section class="dashboard-grid">
-
-            <!-- Module Progress -->
-
-            <div class="dashboard-card">
-
-                <h2>Module Progress</h2>
-
-                <ul>
-
-                    <li>Ceiling - 90%</li>
-                    <li>Partition - 65%</li>
-                    <li>Paneling - 80%</li>
-                    <li>Flooring - 45%</li>
-                    <li>Electrical - 30%</li>
-                    <li>Furniture - 95%</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Project Information -->
-
-            <div class="dashboard-card">
-
-                <h2>Project Information</h2>
-
-                <table>
-
-                    <tr>
-
-                        <td>Customer</td>
-
-                        <td>ABC Pvt Ltd</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Project Manager</td>
-
-                        <td>Ashu</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Business Unit</td>
-
-                        <td>Corporate</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Start Date</td>
-
-                        <td>01-Jan-2026</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>End Date</td>
-
-                        <td>30-Apr-2026</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Days Remaining</td>
-
-                        <td>21</td>
-
-                    </tr>
-
-                </table>
-
-            </div>
-
-        </section>
-
-        <!-- Quick Access -->
-
-        <section class="quick-access">
-
-            <h2>Quick Access</h2>
-
-            <div class="quick-grid">
-
-                <button id="taskBoardBtn">
-                    📋 Task Board
-                </button>
-
-                <button>
-                    📂 Documents
-                </button>
-
-                <button>
-                    📐 Drawings
-                </button>
-
-                <button>
-                    👥 Team
-                </button>
-
-                <button>
-                    📊 Reports
-                </button>
-
-                <button>
-                    ⚠ Issues
-                </button>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <script src="../../assets/js/projectprogress.js"></script>
-
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ONEPWS | Project Progress</title>
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <link rel="stylesheet"
-          href="../../assets/css/style.css">
-
-    <link rel="stylesheet"
-          href="../../assets/css/projectprogress.css">
-
-</head>
 
 <body>
 
-<div class="app-layout">
 
-    <!-- Sidebar -->
+<div class="progress-container">
 
-    <aside class="sidebar">
 
-        <!-- We'll reuse the same sidebar used in Task Board -->
+<!-- HEADER -->
 
-    </aside>
+<div class="page-header">
 
-    <!-- Main -->
+<h1>Project Progress Board</h1>
 
-    <main class="main-content">
-
-        <!-- Header -->
-
-        <header class="page-header">
-
-            <div>
-
-                <h1>Project Progress Board</h1>
-
-                <p>Monitor project completion status.</p>
-
-            </div>
-
-        </header>
-
-        <!-- Toolbar -->
-
-        <section class="toolbar">
-
-            <div class="toolbar-left">
-
-                <button class="secondary-btn">
-
-                    <i class="fa-solid fa-arrow-left"></i>
-
-                    Dashboard
-
-                </button>
-
-            </div>
-
-            <div class="toolbar-right">
-
-                <input
-                    type="text"
-                    placeholder="Search Project...">
-
-            </div>
-
-        </section>
-
-        <!-- KPI CARDS -->
-
-        <section class="progress-kpi">
-
-            <div class="kpi-card">
-                <h3>24</h3>
-                <span>Total Projects</span>
-            </div>
-
-            <div class="kpi-card">
-                <h3>15</h3>
-                <span>On Track</span>
-            </div>
-
-            <div class="kpi-card">
-                <h3>5</h3>
-                <span>Delayed</span>
-            </div>
-
-            <div class="kpi-card">
-                <h3>4</h3>
-                <span>Completed</span>
-            </div>
-
-            <div class="kpi-card">
-                <h3>2</h3>
-                <span>Critical</span>
-            </div>
-
-        </section>
-
-        <!-- PROJECT LIST -->
-
-        <section class="project-progress-container">
-
-        </section>
-
-    </main>
+<p>
+Project : Corporate Headquarters Development
+</p>
 
 </div>
 
-<script src="../../assets/js/projectprogress.js"></script>
+
+
+<!-- KPI SECTION -->
+
+<div class="progress-kpi">
+
+
+<div class="kpi-card">
+
+<h3>Overall Completion</h3>
+
+<div class="circle">
+
+<span id="overallProgress">
+72%
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="kpi-card">
+
+<h3>Material Status</h3>
+
+<h2 class="green">
+85%
+</h2>
+
+<p>Material On Site</p>
+
+</div>
+
+
+
+<div class="kpi-card">
+
+<h3>Installation</h3>
+
+<h2 class="orange">
+60%
+</h2>
+
+<p>Work In Progress</p>
+
+</div>
+
+
+
+<div class="kpi-card">
+
+<h3>Warnings</h3>
+
+<h2 class="red">
+3
+</h2>
+
+<p>Critical Issues</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- MAIN PROGRESS AREA -->
+
+
+<div class="progress-grid">
+
+
+
+<!-- CHART -->
+
+
+<div class="chart-box">
+
+<h2>Project Progress</h2>
+
+
+<canvas id="progressChart"></canvas>
+
+
+</div>
+
+
+
+
+
+<!-- DETAILS -->
+
+
+<div class="status-box">
+
+
+<h2>Progress Details</h2>
+
+
+<div class="progress-row">
+
+<label>
+Reservation
+</label>
+
+<div class="bar">
+
+<span style="width:90%">
+</span>
+
+</div>
+
+<b>
+90%
+</b>
+
+</div>
+
+
+
+<div class="progress-row">
+
+<label>
+Manufacturing
+</label>
+
+<div class="bar">
+
+<span style="width:75%">
+</span>
+
+</div>
+
+<b>
+75%
+</b>
+
+</div>
+
+
+
+
+
+<div class="progress-row">
+
+<label>
+Site Approval
+</label>
+
+<div class="bar">
+
+<span style="width:65%">
+</span>
+
+</div>
+
+<b>
+65%
+</b>
+
+</div>
+
+
+
+
+<div class="progress-row">
+
+<label>
+Dispatch
+</label>
+
+<div class="bar">
+
+<span style="width:55%">
+</span>
+
+</div>
+
+<b>
+55%
+</b>
+
+</div>
+
+
+
+
+<div class="progress-row">
+
+<label>
+Installation
+</label>
+
+<div class="bar">
+
+<span style="width:60%">
+</span>
+
+</div>
+
+<b>
+60%
+</b>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- WARNINGS -->
+
+
+<div class="warning-box">
+
+
+<h2>
+Critical Warnings
+</h2>
+
+
+
+<div class="warning">
+
+⚠ Delay in Electrical Approval
+
+</div>
+
+
+<div class="warning">
+
+⚠ Material shortage in Flooring Module
+
+</div>
+
+
+<div class="warning">
+
+⚠ Client Approval Pending
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script src="../../assets/js/progressboard.js"></script>
+
 
 </body>
 
