@@ -883,3 +883,105 @@ END
 
 console.log("ONEPWS Task Board Loaded Successfully");
 
+/*==========================================================
+TASK MODAL ENGINE
+==========================================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const modal = document.getElementById("taskModal");
+    const closeBtn = document.getElementById("closeModal");
+    const cancelBtn = document.getElementById("cancelModal");
+
+    const cards = document.querySelectorAll(".task-card");
+
+    /*--------------------------------------------------
+    OPEN MODAL
+    --------------------------------------------------*/
+
+    cards.forEach(function(card){
+
+        card.addEventListener("click", function(){
+
+            modal.style.display = "flex";
+
+        });
+
+    });
+
+    /*--------------------------------------------------
+    CLOSE BUTTON
+    --------------------------------------------------*/
+
+    if(closeBtn){
+
+        closeBtn.addEventListener("click", function(){
+
+            modal.style.display = "none";
+
+        });
+
+    }
+
+    /*--------------------------------------------------
+    CANCEL BUTTON
+    --------------------------------------------------*/
+
+    if(cancelBtn){
+
+        cancelBtn.addEventListener("click", function(){
+
+            modal.style.display = "none";
+
+        });
+
+    }
+
+    /*--------------------------------------------------
+    CLICK OUTSIDE MODAL
+    --------------------------------------------------*/
+
+    window.addEventListener("click", function(e){
+
+        if(e.target === modal){
+
+            modal.style.display = "none";
+
+        }
+
+    });
+
+    /*--------------------------------------------------
+    TAB ENGINE
+    --------------------------------------------------*/
+
+    const tabs = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(function(tab){
+
+        tab.addEventListener("click", function(){
+
+            tabs.forEach(function(btn){
+
+                btn.classList.remove("active");
+
+            });
+
+            contents.forEach(function(content){
+
+                content.classList.remove("active");
+
+            });
+
+            this.classList.add("active");
+
+            document
+                .getElementById(this.dataset.tab)
+                .classList.add("active");
+
+        });
+
+    });
+
+});

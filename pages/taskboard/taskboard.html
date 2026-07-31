@@ -475,172 +475,223 @@
 
         </section>
 
-        <!-- ==========================================
-                    TASK MODAL
-        =========================================== -->
+        
+<!-- ==========================================================
+TASK DETAILS MODAL
+========================================================== -->
 
-        <div class="modal-overlay" id="taskModal">
+<div id="taskModal" class="task-modal-overlay">
 
-            <div class="task-modal">
+    <div class="task-modal">
 
-                <div class="modal-header">
+        <!-- Header -->
 
-                    <h2>
-                        <i class="fa-solid fa-list-check"></i>
-                        Task Details
-                    </h2>
+        <div class="task-modal-header">
 
-                    <button class="close-modal" id="closeModal">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
+            <div>
 
-                </div>
+                <h2 id="modalTaskTitle">Task Details</h2>
 
-                <div class="modal-body">
+                <p id="modalProjectNumber">Project No.</p>
 
-                    <div class="form-row">
+            </div>
 
-                        <div class="form-group">
+            <button id="closeModal" class="modal-close">
 
-                            <label>Project Number</label>
+                <i class="fa-solid fa-xmark"></i>
 
-                            <input type="text"
-                                   id="projectNo">
+            </button>
 
-                        </div>
+        </div>
 
-                        <div class="form-group">
+        <!-- Tabs -->
 
-                            <label>Project Name</label>
+        <div class="task-tabs">
 
-                            <input type="text"
-                                   id="projectName">
+            <button class="tab-btn active" data-tab="general">
+                General
+            </button>
 
-                        </div>
+            <button class="tab-btn" data-tab="task">
+                Task
+            </button>
 
-                    </div>
+            <button class="tab-btn" data-tab="documents">
+                Documents
+            </button>
 
-                    <div class="form-row">
+            <button class="tab-btn" data-tab="comments">
+                Comments
+            </button>
 
-                        <div class="form-group">
+            <button class="tab-btn" data-tab="history">
+                History
+            </button>
 
-                            <label>Customer</label>
+            <button class="tab-btn" data-tab="settings">
+                Settings
+            </button>
 
-                            <input type="text"
-                                   id="customer">
+        </div>
 
-                        </div>
+        <!-- BODY -->
 
-                        <div class="form-group">
+        <div class="task-modal-body">
 
-                            <label>Assigned To</label>
+            <!-- GENERAL TAB -->
 
-                            <input type="text"
-                                   id="assignedTo">
+            <div class="tab-content active" id="general">
 
-                        </div>
+                <div class="form-grid">
 
-                    </div>
+                    <div class="form-group">
 
-                    <div class="form-row">
+                        <label>Project Number</label>
 
-                        <div class="form-group">
-
-                            <label>Priority</label>
-
-                            <select id="priority">
-
-                                <option>High</option>
-                                <option>Medium</option>
-                                <option>Low</option>
-
-                            </select>
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label>Status</label>
-
-                            <select id="status">
-
-                                <option>RFQ</option>
-                                <option>INFO MISSING</option>
-                                <option>WIP</option>
-                                <option>QC</option>
-                                <option>RESOLVED</option>
-                                <option>COMPLETED</option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label>Start Date</label>
-
-                            <input type="date"
-                                   id="startDate">
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label>End Date</label>
-
-                            <input type="date"
-                                   id="endDate">
-
-                        </div>
+                        <input type="text" id="projectNumber">
 
                     </div>
 
                     <div class="form-group">
 
-                        <label>Description</label>
+                        <label>Project Name</label>
 
-                        <textarea id="description"
-                                  rows="5"></textarea>
+                        <input type="text" id="projectName">
 
                     </div>
 
                     <div class="form-group">
 
-                        <label>Comments</label>
+                        <label>Customer</label>
 
-                        <textarea id="comments"
-                                  rows="4"></textarea>
+                        <input type="text" id="customerName">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Business Unit</label>
+
+                        <input type="text" id="businessUnit">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Module</label>
+
+                        <input type="text" id="moduleName">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Priority</label>
+
+                        <select id="priority">
+
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Assigned To</label>
+
+                        <input type="text" id="assignedTo">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Status</label>
+
+                        <select id="taskStatus">
+
+                            <option>RFQ</option>
+                            <option>INFO MISSING</option>
+                            <option>WIP</option>
+                            <option>QC</option>
+                            <option>RESOLUTION</option>
+                            <option>COMPLETED</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Start Date</label>
+
+                        <input type="date" id="startDate">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Due Date</label>
+
+                        <input type="date" id="dueDate">
 
                     </div>
 
                 </div>
 
-                <div class="modal-footer">
+                <div class="form-group">
 
-                    <button class="secondary-btn"
-                            id="deleteTask">
+                    <label>Description</label>
 
-                        Delete
-
-                    </button>
-
-                    <button class="primary-btn"
-                            id="saveTask">
-
-                        Save Task
-
-                    </button>
+                    <textarea id="taskDescription" rows="6"></textarea>
 
                 </div>
 
             </div>
 
+            <!-- Empty Tabs -->
+
+            <div class="tab-content" id="task"></div>
+
+            <div class="tab-content" id="documents"></div>
+
+            <div class="tab-content" id="comments"></div>
+
+            <div class="tab-content" id="history"></div>
+
+            <div class="tab-content" id="settings"></div>
+
         </div>
 
+        <!-- Footer -->
+
+        <div class="task-modal-footer">
+
+            <button class="secondary-btn">
+
+                Delete
+
+            </button>
+
+            <button class="secondary-btn" id="cancelModal">
+
+                Cancel
+
+            </button>
+
+            <button class="primary-btn">
+
+                Save Changes
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
         <!-- ==========================================
                 TOAST NOTIFICATION
         =========================================== -->
