@@ -569,17 +569,9 @@ COLUMN
 
 .kanban-column{
 
-    flex:0 0 290px;
+    width:185px;
 
-    display:flex;
-
-    flex-direction:column;
-
-    background:#f3f6fb;
-
-    border-radius:14px;
-
-    min-height:650px;
+    min-width:185px;
 
 }
 
@@ -819,23 +811,20 @@ TASK CARD
 
 .task-card{
 
-    position:relative;
+    .task-card{
 
-    background:#ffffff;
+    width:170px;
+    min-height:95px;
 
-    border-radius:12px;
+    padding:8px;
 
-    padding:12px;
+    border-radius:8px;
 
-    box-shadow:0 3px 10px rgba(0,0,0,.06);
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
 
-    cursor:grab;
+    transition:.2s;
 
-    transition:.25s;
-
-    border:1px solid #edf2f7;
-
-    overflow:hidden;
+}
 
 }
 
@@ -911,9 +900,9 @@ CARD HEADER
 
 .project-number{
 
-    font-size:11px;
+    font-size:9px;
 
-    font-weight:700;
+    font-weight:600;
 
     color:#64748b;
 
@@ -947,7 +936,7 @@ PROJECT NAME
 
 .project-name{
 
-    font-size:15px;
+    font-size:12px;
 
     font-weight:600;
 
@@ -955,7 +944,7 @@ PROJECT NAME
 
     margin-bottom:4px;
 
-    line-height:1.35;
+    line-height:15px;
 
 }
 
@@ -963,7 +952,7 @@ PROJECT NAME
 
     color:#64748b;
 
-    font-size:13px;
+    font-size:10px;
 
     margin-bottom:12px;
 
@@ -975,7 +964,7 @@ PROGRESS
 
 .progress-section{
 
-    margin-bottom:12px;
+    margin-bottom:6px;
 
 }
 
@@ -989,7 +978,7 @@ PROGRESS
 
     margin-bottom:6px;
 
-    font-size:12px;
+    font-size:9px;
 
 }
 
@@ -997,7 +986,7 @@ PROGRESS
 
     width:100%;
 
-    height:7px;
+    height:4px;
 
     background:#e5e7eb;
 
@@ -1075,7 +1064,7 @@ COUNTDOWN
 
     border-radius:20px;
 
-    font-size:11px;
+    font-size:9px;
 
     font-weight:600;
 
@@ -1083,7 +1072,7 @@ COUNTDOWN
 
     color:#2563eb;
 
-    margin-bottom:12px;
+    margin-bottom:6px;
 
 }
 
@@ -1123,7 +1112,7 @@ FOOTER
 
     align-items:center;
 
-    margin-top:8px;
+    margin-top:6px;
 
 }
 
@@ -1143,9 +1132,9 @@ USER
 
 .user-avatar{
 
-    width:32px;
+    width:20px;
 
-    height:32px;
+    height:20px;
 
     border-radius:50%;
 
@@ -1167,7 +1156,7 @@ USER
 
 .user-name{
 
-    font-size:12px;
+    font-size:9px;
 
     color:#475569;
 
@@ -1179,7 +1168,7 @@ PRIORITY BADGE
 
 .priority{
 
-    padding:5px 10px;
+    padding:2px 6px;
 
     border-radius:20px;
 
@@ -1221,11 +1210,11 @@ COMMENTS & ATTACHMENTS
 
     display:flex;
 
-    gap:14px;
+    gap:5px;
 
     margin-top:10px;
 
-    font-size:12px;
+    font-size:9px;
 
     color:#64748b;
 
