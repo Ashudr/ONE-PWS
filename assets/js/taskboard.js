@@ -592,9 +592,9 @@ function openTask(id){
 
     if(!task) return;
 
-    document.getElementById("projectNumber").value = task.projectNo;
+    document.getElementById("projectNumber").value = task.projectNumbero;
     document.getElementById("projectName").value = task.projectName;
-    document.getElementById("customerName").value = task.customer;
+    document.getElementById("customerName").value = task.customerName;
     document.getElementById("assignedTo").value = task.assignedTo;
     document.getElementById("priority").value = task.priority;
     document.getElementById("taskStatus").value = task.status;
@@ -603,7 +603,7 @@ function openTask(id){
     document.getElementById("taskDescription").value = task.description;
 
     document.getElementById("modalTaskTitle").innerText = task.projectName;
-    document.getElementById("modalProjectNumber").innerText = task.projectNo;
+    document.getElementById("modalProjectNumber").innerText = task.projectNumber;
 
     document.getElementById("taskModal").style.display = "flex";
 
@@ -627,9 +627,9 @@ function newTask(){
 
     currentTaskId = null;
 
-    document.getElementById("projectNo").value="";
+    document.getElementById("projectNumber").value="";
     document.getElementById("projectName").value="";
-    document.getElementById("customer").value="";
+    document.getElementById("customerName").value="";
     document.getElementById("assignedTo").value="";
     document.getElementById("priority").value="Medium";
     document.getElementById("status").value="RFQ";
