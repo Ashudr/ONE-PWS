@@ -309,6 +309,12 @@ function createTaskCard(task){
 
     `;
 
+card.addEventListener("click", function () {
+
+    openTask(task.id);
+
+});
+
     return card;
 
 }
@@ -579,25 +585,29 @@ document.addEventListener("dblclick",function(e){
 
 function openTask(id){
 
-    currentTaskId=id;
 
-    const task=tasks.find(t=>t.id===id);
+    currentTaskId = id;
+
+    const task = tasks.find(t => t.id === id);
 
     if(!task) return;
 
-    document.getElementById("projectNo").value=task.projectNo;
-    document.getElementById("projectName").value=task.projectName;
-    document.getElementById("customer").value=task.customer;
-    document.getElementById("assignedTo").value=task.assignedTo;
-    document.getElementById("priority").value=task.priority;
-    document.getElementById("status").value=task.status;
-    document.getElementById("startDate").value=task.startDate;
-    document.getElementById("endDate").value=task.endDate;
-    document.getElementById("description").value=task.description;
+    document.getElementById("projectNumber").value = task.projectNo;
+    document.getElementById("projectName").value = task.projectName;
+    document.getElementById("customerName").value = task.customer;
+    document.getElementById("assignedTo").value = task.assignedTo;
+    document.getElementById("priority").value = task.priority;
+    document.getElementById("taskStatus").value = task.status;
+    document.getElementById("startDate").value = task.startDate;
+    document.getElementById("dueDate").value = task.endDate;
+    document.getElementById("taskDescription").value = task.description;
 
-    document
-        .getElementById("taskModal")
-        .classList.add("active");
+    document.getElementById("modalTaskTitle").innerText = task.projectName;
+    document.getElementById("modalProjectNumber").innerText = task.projectNo;
+
+    document.getElementById("taskModal").style.display = "flex";
+
+}
 
 }
 
@@ -747,9 +757,7 @@ document
 
 function closeModal(){
 
-    document
-        .getElementById("taskModal")
-        .classList.remove("active");
+    document.getElementById("taskModal").style.display = "none";
 
 }
 
@@ -883,105 +891,3 @@ END
 
 console.log("ONEPWS Task Board Loaded Successfully");
 
-/*==========================================================
-TASK MODAL ENGINE
-==========================================================*/
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const modal = document.getElementById("taskModal");
-    const closeBtn = document.getElementById("closeModal");
-    const cancelBtn = document.getElementById("cancelModal");
-
-    const cards = document.querySelectorAll(".task-card");
-
-    /*--------------------------------------------------
-    OPEN MODAL
-    --------------------------------------------------*/
-
-    cards.forEach(function(card){
-
-        card.addEventListener("click", function(){
-
-            modal.style.display = "flex";
-
-        });
-
-    });
-
-    /*--------------------------------------------------
-    CLOSE BUTTON
-    --------------------------------------------------*/
-
-    if(closeBtn){
-
-        closeBtn.addEventListener("click", function(){
-
-            modal.style.display = "none";
-
-        });
-
-    }
-
-    /*--------------------------------------------------
-    CANCEL BUTTON
-    --------------------------------------------------*/
-
-    if(cancelBtn){
-
-        cancelBtn.addEventListener("click", function(){
-
-            modal.style.display = "none";
-
-        });
-
-    }
-
-    /*--------------------------------------------------
-    CLICK OUTSIDE MODAL
-    --------------------------------------------------*/
-
-    window.addEventListener("click", function(e){
-
-        if(e.target === modal){
-
-            modal.style.display = "none";
-
-        }
-
-    });
-
-    /*--------------------------------------------------
-    TAB ENGINE
-    --------------------------------------------------*/
-
-    const tabs = document.querySelectorAll(".tab-btn");
-    const contents = document.querySelectorAll(".tab-content");
-
-    tabs.forEach(function(tab){
-
-        tab.addEventListener("click", function(){
-
-            tabs.forEach(function(btn){
-
-                btn.classList.remove("active");
-
-            });
-
-            contents.forEach(function(content){
-
-                content.classList.remove("active");
-
-            });
-
-            this.classList.add("active");
-
-            document
-                .getElementById(this.dataset.tab)
-                .classList.add("active");
-
-        });
-
-    });
-
-});
