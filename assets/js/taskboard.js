@@ -592,7 +592,7 @@ function openTask(id){
 
     if(!task) return;
 
-    document.getElementById("projectNumber").value = task.projectNumbero;
+    document.getElementById("projectNumber").value = task.projectNumber;
     document.getElementById("projectName").value = task.projectName;
     document.getElementById("customerName").value = task.customerName;
     document.getElementById("assignedTo").value = task.assignedTo;
