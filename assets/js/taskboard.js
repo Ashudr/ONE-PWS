@@ -480,11 +480,11 @@ const searchBox=document.getElementById("searchInput");
 
 if(searchBox){
 
-    searchBox.addEventListener("keyup",searchTasks);
+    searchBox.addEventListener("keyup",searchTask);
 
 }
 
-function searchTasks(){
+function searchTask(){
 
     const keyword=this.value.toLowerCase();
 
@@ -547,44 +547,7 @@ function filterPriority(){
 TOAST
 ==========================================================*/
 
-function showToast(message,type="success"){
-
-    const toast=document.createElement("div");
-
-    toast.className="toast "+type;
-
-    toast.innerHTML=message;
-
-    document
-        .getElementById("toastContainer")
-        .appendChild(toast);
-
-    setTimeout(()=>{
-
-        toast.remove();
-
-    },3000);
-
-}
-
-/*==========================================================
-OPEN MODAL
-==========================================================*/
-
-document.addEventListener("dblclick",function(e){
-
-    const card=e.target.closest(".task-card");
-
-    if(!card) return;
-
-    const id=parseInt(card.dataset.id);
-
-    openTask(id);
-
-});
-
 function openTask(id){
-
 
     currentTaskId = id;
 
@@ -592,21 +555,25 @@ function openTask(id){
 
     if(!task) return;
 
-    document.getElementById("projectNumber").value = task.projectNumber;
+    document.getElementById("projectNo").value = task.projectNo;
     document.getElementById("projectName").value = task.projectName;
-    document.getElementById("customerName").value = task.customerName;
+    document.getElementById("customer").value = task.customer;
+    document.getElementById("businessUnit").value = task.businessUnit || "";
+    document.getElementById("moduleName").value = task.moduleName || "";
     document.getElementById("assignedTo").value = task.assignedTo;
     document.getElementById("priority").value = task.priority;
-    document.getElementById("taskStatus").value = task.status;
+    document.getElementById("status").value = task.status;
     document.getElementById("startDate").value = task.startDate;
-    document.getElementById("dueDate").value = task.endDate;
-    document.getElementById("taskDescription").value = task.description;
+    document.getElementById("endDate").value = task.endDate;
+    document.getElementById("description").value = task.description;
 
-    document.getElementById("modalTaskTitle").innerText = task.projectName;
-    document.getElementById("modalProjectNumber").innerText = task.projectNumber;
+    document.getElementById("modalTaskTitle").innerText =
+        task.projectName;
+
+    document.getElementById("modalProjectNumber").innerText =
+        task.projectNo;
 
     document.getElementById("taskModal").style.display = "flex";
-
 }
 
 
@@ -614,32 +581,32 @@ function openTask(id){
 ADD NEW TASK
 ==========================================================*/
 
-const addTaskBtn = document.querySelector(".add-task-btn");
+const addTaskBtn = document.getElementById("addTaskBtn");
 
 if(addTaskBtn){
-
     addTaskBtn.addEventListener("click", newTask);
-
 }
 
 function newTask(){
 
     currentTaskId = null;
 
-    document.getElementById("projectNumber").value="";
-    document.getElementById("projectName").value="";
-    document.getElementById("customerName").value="";
-    document.getElementById("assignedTo").value="";
-    document.getElementById("priority").value="Medium";
-    document.getElementById("status").value="RFQ";
-    document.getElementById("startDate").value="";
-    document.getElementById("endDate").value="";
-    document.getElementById("description").value="";
-    document.getElementById("comments").value="";
+    document.getElementById("projectNo").value = "";
+    document.getElementById("projectName").value = "";
+    document.getElementById("customer").value = "";
+    document.getElementById("businessUnit").value = "";
+    document.getElementById("moduleName").value = "";
+    document.getElementById("assignedTo").value = "";
+    document.getElementById("priority").value = "Medium";
+    document.getElementById("status").value = "RFQ";
+    document.getElementById("startDate").value = "";
+    document.getElementById("endDate").value = "";
+    document.getElementById("description").value = "";
 
-    document.getElementById("taskModal")
-        .classList.add("active");
+    document.getElementById("modalTaskTitle").innerText = "New Task";
+    document.getElementById("modalProjectNumber").innerText = "";
 
+    document.getElementById("taskModal").style.display = "flex";
 }
 
 /*==========================================================
