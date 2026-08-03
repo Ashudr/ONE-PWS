@@ -585,27 +585,27 @@ document.addEventListener("dblclick",function(e){
 
 function openTask(id){
 
-
     currentTaskId = id;
 
     const task = tasks.find(t => t.id === id);
 
     if(!task) return;
 
-    document.getElementById("projectNumber").value = task.projectNumbero;
-    document.getElementById("projectName").value = task.projectName;
-    document.getElementById("customerName").value = task.customerName;
-    document.getElementById("assignedTo").value = task.assignedTo;
-    document.getElementById("priority").value = task.priority;
-    document.getElementById("taskStatus").value = task.status;
-    document.getElementById("startDate").value = task.startDate;
-    document.getElementById("dueDate").value = task.endDate;
-    document.getElementById("taskDescription").value = task.description;
+    document.getElementById("projectNumber").value = task.projectNo || "";
+    document.getElementById("projectName").value = task.projectName || "";
+    document.getElementById("customerName").value = task.customer || "";
+    document.getElementById("businessUnit").value = task.businessUnit || "";
+    document.getElementById("moduleName").value = task.moduleName || "";
+    document.getElementById("priority").value = task.priority || "Medium";
+    document.getElementById("assignedTo").value = task.assignedTo || "";
+    document.getElementById("taskStatus").value = task.status || "RFQ";
+    document.getElementById("startDate").value = task.startDate || "";
+    document.getElementById("dueDate").value = task.endDate || "";
+    document.getElementById("taskDescription").value = task.description || "";
 
-    document.getElementById("modalTaskTitle").innerText = task.projectName;
-    document.getElementById("modalProjectNumber").innerText = task.projectNumber;
-
-    document.getElementById("taskModal").style.display = "flex";
+    document
+        .getElementById("taskModal")
+        .classList.add("active");
 
 }
 
