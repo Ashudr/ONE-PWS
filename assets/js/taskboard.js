@@ -652,35 +652,39 @@ document
 
 function saveTask(){
 
-    const task={
+    const task = {
 
-        id: currentTaskId || Date.now(),
+    id: currentTaskId || Date.now(),
 
-        projectNo:document.getElementById("projectNo").value,
+    projectNo: document.getElementById("projectNumber").value,
 
-        projectName:document.getElementById("projectName").value,
+    projectName: document.getElementById("projectName").value,
 
-        customer:document.getElementById("customer").value,
+    customer: document.getElementById("customerName").value,
 
-        assignedTo:document.getElementById("assignedTo").value,
+    businessUnit: document.getElementById("businessUnit").value,
 
-        priority:document.getElementById("priority").value,
+    moduleName: document.getElementById("moduleName").value,
 
-        status:document.getElementById("status").value,
+    assignedTo: document.getElementById("assignedTo").value,
 
-        startDate:document.getElementById("startDate").value,
+    priority: document.getElementById("priority").value,
 
-        endDate:document.getElementById("endDate").value,
+    status: document.getElementById("taskStatus").value,
 
-        description:document.getElementById("description").value,
+    startDate: document.getElementById("startDate").value,
 
-        progress:0,
+    endDate: document.getElementById("dueDate").value,
 
-        comments:0,
+    description: document.getElementById("taskDescription").value,
 
-        attachments:0
+    progress: 0,
 
-    };
+    comments: 0,
+
+    attachments: 0
+
+};
 
     if(currentTaskId){
 
