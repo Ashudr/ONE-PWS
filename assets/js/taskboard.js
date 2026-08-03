@@ -585,27 +585,27 @@ document.addEventListener("dblclick",function(e){
 
 function openTask(id){
 
+
     currentTaskId = id;
 
     const task = tasks.find(t => t.id === id);
 
     if(!task) return;
 
-    document.getElementById("projectNumber").value = task.projectNo || "";
-    document.getElementById("projectName").value = task.projectName || "";
-    document.getElementById("customerName").value = task.customer || "";
-    document.getElementById("businessUnit").value = task.businessUnit || "";
-    document.getElementById("moduleName").value = task.moduleName || "";
-    document.getElementById("priority").value = task.priority || "Medium";
-    document.getElementById("assignedTo").value = task.assignedTo || "";
-    document.getElementById("taskStatus").value = task.status || "RFQ";
-    document.getElementById("startDate").value = task.startDate || "";
-    document.getElementById("dueDate").value = task.endDate || "";
-    document.getElementById("taskDescription").value = task.description || "";
+    document.getElementById("projectNumber").value = task.projectNumbero;
+    document.getElementById("projectName").value = task.projectName;
+    document.getElementById("customerName").value = task.customerName;
+    document.getElementById("assignedTo").value = task.assignedTo;
+    document.getElementById("priority").value = task.priority;
+    document.getElementById("taskStatus").value = task.status;
+    document.getElementById("startDate").value = task.startDate;
+    document.getElementById("dueDate").value = task.endDate;
+    document.getElementById("taskDescription").value = task.description;
 
-    document
-        .getElementById("taskModal")
-        .classList.add("active");
+    document.getElementById("modalTaskTitle").innerText = task.projectName;
+    document.getElementById("modalProjectNumber").innerText = task.projectNumber;
+
+    document.getElementById("taskModal").style.display = "flex";
 
 }
 
@@ -652,39 +652,35 @@ document
 
 function saveTask(){
 
-    const task = {
+    const task={
 
-    id: currentTaskId || Date.now(),
+        id: currentTaskId || Date.now(),
 
-    projectNo: document.getElementById("projectNumber").value,
+        projectNo:document.getElementById("projectNo").value,
 
-    projectName: document.getElementById("projectName").value,
+        projectName:document.getElementById("projectName").value,
 
-    customer: document.getElementById("customerName").value,
+        customer:document.getElementById("customer").value,
 
-    businessUnit: document.getElementById("businessUnit").value,
+        assignedTo:document.getElementById("assignedTo").value,
 
-    moduleName: document.getElementById("moduleName").value,
+        priority:document.getElementById("priority").value,
 
-    assignedTo: document.getElementById("assignedTo").value,
+        status:document.getElementById("status").value,
 
-    priority: document.getElementById("priority").value,
+        startDate:document.getElementById("startDate").value,
 
-    status: document.getElementById("taskStatus").value,
+        endDate:document.getElementById("endDate").value,
 
-    startDate: document.getElementById("startDate").value,
+        description:document.getElementById("description").value,
 
-    endDate: document.getElementById("dueDate").value,
+        progress:0,
 
-    description: document.getElementById("taskDescription").value,
+        comments:0,
 
-    progress: 0,
+        attachments:0
 
-    comments: 0,
-
-    attachments: 0
-
-};
+    };
 
     if(currentTaskId){
 
