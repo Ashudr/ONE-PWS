@@ -34,13 +34,13 @@ const sampleTasks = [
     comments:2,
     attachments:1
 
-    history=[
+    history={
     { 
         action: "Task Created",
         user: "System",
         date: new Date().toLocaleString()
     }
-]
+}
 
 },
 
