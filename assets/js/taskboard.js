@@ -663,7 +663,7 @@ function saveTask(){
 
         comments:0,
 
-        attachments:0
+        attachments:0,
 
         history:[
     {
