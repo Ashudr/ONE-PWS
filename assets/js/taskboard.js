@@ -687,14 +687,12 @@ function saveTask(){
         attachments:0,
 
         history:[
-    {
-        action:"Task Created",
-        user:"Ashu",
-        date:new Date().toLocaleString()
-    }
-
-
-],
+        {
+            action: "Task Created",
+            user: "Ashu",
+            date: new Date().toLocaleString()
+        }
+      ],
 
     };
 
@@ -711,6 +709,7 @@ function saveTask(){
 
 
         tasks[index]=task;
+        addHistory(task.id, "Task Updated");
 
         addHistory(task.id,"Task Updated");
 
@@ -729,6 +728,30 @@ function saveTask(){
     closeModal();
 
     showToast("Task Saved Successfully");
+
+}
+
+function addHistory(taskId, action) {
+
+    const task = tasks.find(t => t.id === taskId);
+
+    if (!task) return;
+
+    if (!task.history) {
+
+        task.history = [];
+
+    }
+
+    task.history.push({
+
+        action: action,
+        user: "Ashu",      // Later we'll replace this with the logged-in user
+        date: new Date().toLocaleString()
+
+    });
+
+    saveTasks();
 
 }
 
