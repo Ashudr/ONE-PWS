@@ -42,7 +42,7 @@ const sampleTasks = [
     }
     ]
 
-}
+},
 
 {
     id:2,
