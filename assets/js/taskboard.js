@@ -34,7 +34,7 @@ const sampleTasks = [
     comments:2,
     attachments:1
 
-    history=[
+    history: [
     { 
         action: "Task Created",
         user: "System",
@@ -665,7 +665,7 @@ function saveTask(){
 
         attachments:0
 
-        history=[
+        history: [
     {
         action:"Task Created",
         user:"Ashu",
