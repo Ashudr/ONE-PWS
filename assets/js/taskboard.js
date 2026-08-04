@@ -665,7 +665,7 @@ function saveTask(){
 
         attachments:0
 
-        history={
+        history=[
     {
         action:"Task Created",
         user:"Ashu",
@@ -673,7 +673,7 @@ function saveTask(){
     }
 
 
-        };
+];
 
     if(currentTaskId){
 
