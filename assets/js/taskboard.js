@@ -32,7 +32,7 @@ const sampleTasks = [
     endDate:"2026-08-05",
     description:"Prepare RFQ documents",
     comments:2,
-    attachments:1
+    attachments:1,
 
     history:[
     { 
