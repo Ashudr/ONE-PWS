@@ -629,6 +629,10 @@ function saveTask(){
 
         customer:document.getElementById("customer").value,
 
+        businessUnit: document.getElementById("businessUnit").value,
+
+        moduleName: document.getElementById("moduleName").value,
+
         assignedTo:document.getElementById("assignedTo").value,
 
         priority:document.getElementById("priority").value,
