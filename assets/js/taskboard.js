@@ -675,6 +675,8 @@ function saveTask(){
 
 ],
 
+    };
+
     if(currentTaskId){
 
         const index=tasks.findIndex(
