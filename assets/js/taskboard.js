@@ -673,7 +673,7 @@ function saveTask(){
     }
 
 
-],
+];
 
     if(currentTaskId){
 
