@@ -33,6 +33,15 @@ const sampleTasks = [
     description:"Prepare RFQ documents",
     comments:2,
     attachments:1
+
+    history: [
+    {
+        action: "Task Created",
+        user: "System",
+        date: new Date().toLocaleString()
+    }
+]
+
 },
 
 {
@@ -464,6 +473,11 @@ function dropCard(e){
 
     task.status=newStatus;
 
+    addHistory(
+    task.id,
+    "Moved to " + newStatus
+);
+
     saveTasks();
 
     renderBoard();
@@ -651,6 +665,14 @@ function saveTask(){
 
         attachments:0
 
+        history:[
+    {
+        action:"Task Created",
+        user:"Ashu",
+        date:new Date().toLocaleString()
+    }
+
+
     };
 
     if(currentTaskId){
@@ -662,8 +684,12 @@ function saveTask(){
         task.progress = tasks[index].progress;
         task.comments = tasks[index].comments;
         task.attachments = tasks[index].attachments;
+        task.history = tasks[index].history;
+
 
         tasks[index]=task;
+
+        addHistory(task.id,"Task Updated");
 
     }else{
 
@@ -861,3 +887,28 @@ END
 
 console.log("ONEPWS Task Board Loaded Successfully");
 
+function addHistory(taskId, action){
+
+    const task = tasks.find(t => t.id === taskId);
+
+    if(!task) return;
+
+    if(!task.history){
+
+        task.history = [];
+
+    }
+
+    task.history.unshift({
+
+        action: action,
+
+        user: "Ashu",
+
+        date: new Date().toLocaleString()
+
+    });
+
+    saveTasks();
+
+}
