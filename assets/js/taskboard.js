@@ -40,7 +40,7 @@ const sampleTasks = [
         user: "System",
         date: new Date().toLocaleString()
     }
-    ];
+    ]
 
 }
 
