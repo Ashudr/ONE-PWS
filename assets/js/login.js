@@ -1,36 +1,26 @@
-/* ==========================================================
-   ONEPWS Enterprise Project Management System
-   Module : Login
-   Version : 1.0
-   ========================================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     const loginForm = document.getElementById("loginForm");
 
-    loginForm.addEventListener("submit", function (event) {
+    loginForm.addEventListener("submit", function (e) {
 
-        // Prevent page refresh
-        event.preventDefault();
+        e.preventDefault();
 
         const username = document.getElementById("username").value.trim();
         const password = document.getElementById("password").value.trim();
 
-        // Simple validation
-        if (username === "") {
-            alert("Please enter your username.");
-            return;
+        if (username === "ONEPWS" && password === "ONEPWS") {
+
+            sessionStorage.setItem("loggedIn", "true");
+            sessionStorage.setItem("user", username);
+
+            window.location.href = "pages/dashboard/dashboard.html";
+
+        } else {
+
+            alert("Invalid Username or Password");
+
         }
-
-        if (password === "") {
-            alert("Please enter your password.");
-            return;
-        }
-
-        // Temporary login
-        // Later this will be replaced with PHP + MySQL authentication
-
-        window.location.href = "pages/dashboard/dashboard.html";
 
     });
 
