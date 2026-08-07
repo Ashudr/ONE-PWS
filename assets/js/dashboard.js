@@ -1,5 +1,14 @@
 "use strict";
 
+
+if (sessionStorage.getItem("loggedIn") !== "true") {
+
+    window.location.href = "../auth/login.html";
+
+}
+
+
+
 /*==================================================
         ONEPWS DASHBOARD
 ==================================================*/
@@ -13,6 +22,20 @@ document.addEventListener("DOMContentLoaded", initializeDashboardButtons);
 function initializeDashboardButtons() {
 
     // Create New Project
+
+    const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        sessionStorage.clear();
+
+        window.location.href = "../auth/login.html";
+
+    });
 
     const createProject =
         document.getElementById("createProjectBtn");
@@ -104,5 +127,9 @@ if (bannerProject) {
         });
 
     }
+
+}
+
+
 
 }
