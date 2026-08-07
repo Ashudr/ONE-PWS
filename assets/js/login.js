@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Dashboard
             window.location.href =
-                "../dashboard/dashboard.html";
+                "pages/dashboard/dashboard.html";
 
         } else {
 
