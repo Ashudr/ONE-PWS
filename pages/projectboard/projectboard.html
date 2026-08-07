@@ -1,196 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
+<title>ONEPWS | Project Board</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/projectboard.css">
 
-    <title>ONEPWS | Project Board</title>
+<!-- ================= HEADER ================= -->
 
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/projectboard.css">
+<header class="top-header">
 
-</head>
+    <div class="logo-area">
 
-<body>
+        <img src="../../assets/images/onepws-logo.png" alt="ONEPWS Logo">
 
-    <!-- ================= HEADER ================= -->
+        <div>
 
-    <header class="top-header">
+            <h2>ONEPWS</h2>
 
-        <div class="logo-area">
-
-            <img src="../../assets/images/onepws-logo.png" alt="ONEPWS Logo">
-
-            <div>
-
-                <h2>ONEPWS</h2>
-
-                <p>Enterprise Project Management System</p>
-
-            </div>
+            <p>Enterprise Project Management System</p>
 
         </div>
-
-        <div class="header-actions">
-
-            <input
-                type="text"
-                id="searchProject"
-                placeholder="Search Project...">
-
-            <button id="notificationBtn">🔔</button>
-
-            <button id="profileBtn">Ashu ▼</button>
-
-        </div>
-
-    </header>
-
-    <!-- ================= MAIN ================= -->
-
-    <div class="main-wrapper">
-
-        <!-- SIDEBAR -->
-
-        <aside class="sidebar">
-
-    <button onclick="window.location.href='../dashboard/dashboard.html'">
-        🏠 Dashboard
-    </button>
-
-    <button class="active">
-        📁 Project Board
-    </button>
-
-    <button onclick="window.location.href='../taskboard/taskboard.html'">
-        📋 Task Board
-    </button>
-
-    <button onclick="window.location.href='../projectprogress/projectprogress.html'">
-        📊 Progress Board
-    </button>
-
-    <button>
-        📈 Reports
-    </button>
-
-    <button>
-        👥 Users
-    </button>
-
-    <button>
-        ⚙ Settings
-    </button>
-
-    <button>
-        🚪 Logout
-    </button>
-
-</aside>
-
-        <!-- CONTENT -->
-
-        <main class="content">
-
-            <!-- PAGE TITLE -->
-
-            <section class="page-header">
-
-                <h1>
-                    Project Board
-                </h1>
-
-                <button id="newProject">
-                    + New Project
-                </button>
-
-            </section>
-
-            <!-- KPI -->
-
-            <section class="kpi-container">
-
-                <div class="kpi-box">
-
-                    <h3>Active</h3>
-
-                    <h2>18</h2>
-
-                </div>
-
-                <div class="kpi-box">
-
-                    <h3>Completed</h3>
-
-                    <h2>12</h2>
-
-                </div>
-
-                <div class="kpi-box">
-
-                    <h3>Critical</h3>
-
-                    <h2>2</h2>
-
-                </div>
-
-                <div class="kpi-box">
-
-                    <h3>On Hold</h3>
-
-                    <h2>3</h2>
-
-                </div>
-
-            </section>
-
-            <!-- FILTERS -->
-
-            <section class="filter-row">
-
-                <select>
-
-                    <option>Financial Year</option>
-
-                </select>
-
-                <select>
-
-                    <option>Customer</option>
-
-                </select>
-
-                <select>
-
-                    <option>Project Manager</option>
-
-                </select>
-
-                <select>
-
-                    <option>Status</option>
-
-                </select>
-
-            </section>
-
-            <!-- PROJECT GRID -->
-
-            <section class="project-grid"
-         id="projectGrid">
-
-</section>
-
-        </main>
 
     </div>
 
-    <script src="../../assets/js/database.js"></script>
+    <div class="header-actions">
 
-<script src="../../assets/js/projectboard.js"></script>
+        <input
+            type="text"
+            id="searchProject"
+            placeholder="Search Project...">
 
-</body>
+        <button id="notificationBtn">🔔</button>
 
-</html>
+        <button id="profileBtn">Ashu ▼</button>
+
+    </div>
+
+</header>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main-wrapper">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+<button onclick="window.location.href='../dashboard/dashboard.html'">
+    🏠 Dashboard
+</button>
+
+<button class="active">
+    📁 Project Board
+</button>
+
+<button onclick="window.location.href='../taskboard/taskboard.html'">
+    📋 Task Board
+</button>
+
+<button onclick="window.location.href='../projectprogress/projectprogress.html'">
+    📊 Progress Board
+</button>
+
+<button>
+    📈 Reports
+</button>
+
+<button>
+    👥 Users
+</button>
+
+<button>
+    ⚙ Settings
+</button>
+
+<button>
+    🚪 Logout
+</button>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <!-- PAGE TITLE -->
+
+        <section class="page-header">
+
+            <h1>
+                Project Board
+            </h1>
+
+            <button id="newProject">
+                + New Project
+            </button>
+
+        </section>
+
+        <!-- KPI -->
+
+        <section class="kpi-container">
+
+            <div class="kpi-box">
+
+                <h3>Active</h3>
+
+                <h2>18</h2>
+
+            </div>
+
+            <div class="kpi-box">
+
+                <h3>Completed</h3>
+
+                <h2>12</h2>
+
+            </div>
+
+            <div class="kpi-box">
+
+                <h3>Critical</h3>
+
+                <h2>2</h2>
+
+            </div>
+
+            <div class="kpi-box">
+
+                <h3>On Hold</h3>
+
+                <h2>3</h2>
+
+            </div>
+
+        </section>
+
+        <!-- FILTERS -->
+
+        <section class="filter-row">
+
+            <select>
+
+                <option>Financial Year</option>
+
+            </select>
+
+            <select>
+
+                <option>Customer</option>
+
+            </select>
+
+            <select>
+
+                <option>Project Manager</option>
+
+            </select>
+
+            <select>
+
+                <option>Status</option>
+
+            </select>
+
+        </section>
+
+        <!-- PROJECT GRID -->
+
+        <section class="project-grid"
+     id="projectGrid">
+
+    </main>
+
+</div>
+
+<script src="../../assets/js/database.js"></script>
