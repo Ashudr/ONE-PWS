@@ -8,10 +8,7 @@
 
     <title>ONEPWS | Project Board</title>
 
-    <link rel="stylesheet" href="../../assets/css/base.css">
-    <link rel="stylesheet" href="../../assets/css/theme.css">
-    <link rel="stylesheet" href="../../assets/css/layout.css">
-    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/projectboard.css">
 
 </head>
@@ -53,70 +50,49 @@
 
     <!-- ================= MAIN ================= -->
 
-    <div class="app-container">
+    <div class="main-wrapper">
 
-    
-    <aside class="sidebar">
+        <!-- SIDEBAR -->
 
-    <div class="menu-title">
-        MAIN MENU
-    </div>
+        <aside class="sidebar">
 
-    <a class="menu-item"
-       href="../dashboard/dashboard.html">
-        <i class="fa-solid fa-table-columns"></i>
-        Dashboard
-    </a>
+    <button onclick="window.location.href='../dashboard/dashboard.html'">
+        🏠 Dashboard
+    </button>
 
-    <a class="menu-item active"
-       href="../projectboard/projectboard.html">
-        <i class="fa-solid fa-diagram-project"></i>
-        Project Board
-    </a>
+    <button class="active">
+        📁 Project Board
+    </button>
 
-    <a class="menu-item"
-       href="../taskboard/taskboard.html">
-        <i class="fa-solid fa-list-check"></i>
-        Task Board
-    </a>
+    <button onclick="window.location.href='../taskboard/taskboard.html'">
+        📋 Task Board
+    </button>
 
-    <a class="menu-item"
-       href="../projectprogress/projectprogress.html">
-        <i class="fa-solid fa-chart-line"></i>
-        Progress Board
-    </a>
+    <button onclick="window.location.href='../projectprogress/projectprogress.html'">
+        📊 Progress Board
+    </button>
 
-    <a class="menu-item"
-       href="#">
-        <i class="fa-solid fa-chart-pie"></i>
-        Reports
-    </a>
+    <button>
+        📈 Reports
+    </button>
 
-    <a class="menu-item"
-       href="#">
-        <i class="fa-solid fa-users"></i>
-        Users
-    </a>
+    <button>
+        👥 Users
+    </button>
 
-    <a class="menu-item"
-       href="#">
-        <i class="fa-solid fa-gear"></i>
-        Settings
-    </a>
+    <button>
+        ⚙ Settings
+    </button>
 
-    <a class="menu-item logout"
-       href="#"
-       id="logoutBtn">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        Logout
-    </a>
+    <button>
+        🚪 Logout
+    </button>
 
 </aside>
 
+        <!-- CONTENT -->
 
-        <!--MAIN CONTENT -->
-
-        <main class="main-content">>
+        <main class="content">
 
             <!-- PAGE TITLE -->
 
